@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solution/app/screens/dengue_symptoms/symptoms_1.dart';
+import 'package:solution/app/screens/preventive_measures/prevencion_1.dart';
 import 'login.dart';
 
 class ScreenDashboard extends StatefulWidget {
@@ -46,12 +48,22 @@ class _ScreenDashboardState extends State<ScreenDashboard> {
             ListTile(
               leading: const Icon(Icons.warning),
               title: const Text('Preventive measures'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PrevencionPage1()));
+              },
             ),
             ListTile(
               leading: const Icon(Icons.sick_outlined),
               title: const Text('Dengue symptoms'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SymptomsPage1()));
+              },
             ),
             ListTile(
               leading: const Icon(Icons.receipt_long_outlined),

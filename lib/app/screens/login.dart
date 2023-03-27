@@ -35,8 +35,8 @@ class _LoginPageState extends State<LoginPage> {
             alignment: Alignment.center,
             padding: const EdgeInsets.all(20.0),
             child: const Text(
-              'LOGIN',
-              style: TextStyle(color: Colors.blue),
+              'LOG IN',
+              style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
             ),
           ),
 
@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
             decoration: InputDecoration(
               icon: const Icon(Icons.account_circle),
               hintText: 'User name',
-              labelText: 'USER',
+              labelText: 'User',
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
             decoration: InputDecoration(
               icon: const Icon(Icons.lock_outline),
               hintText: 'Password',
-              labelText: 'PASSWORD',
+              labelText: 'Password',
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20.0),
               ),
@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 child: const Text(
-                  "INGRESAR",
+                  "Continue",
                 ))
           ]),
 
