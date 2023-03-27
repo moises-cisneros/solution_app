@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solution/app/screens/dengue_symptoms/symptoms_1.dart';
+import 'package:solution/app/screens/diagnostic_test/test_1.dart';
 import 'package:solution/app/screens/preventive_measures/prevencion_1.dart';
 import 'login.dart';
 
@@ -68,7 +69,10 @@ class _ScreenDashboardState extends State<ScreenDashboard> {
             ListTile(
               leading: const Icon(Icons.receipt_long_outlined),
               title: const Text('Diagnostic test'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const TestPage1()));
+              },
             ),
             ListTile(
               leading: const Icon(Icons.video_collection),

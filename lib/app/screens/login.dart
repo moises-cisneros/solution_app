@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:solution/app/screens/home_dashboard.dart';
 
 class LoginPage extends StatefulWidget {
@@ -44,7 +45,9 @@ class _LoginPageState extends State<LoginPage> {
           TextField(
             enableInteractiveSelection: false,
             autofocus: true,
-            textCapitalization: TextCapitalization.characters,
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9]')),
+            ],
             decoration: InputDecoration(
               icon: const Icon(Icons.account_circle),
               hintText: 'User name',
