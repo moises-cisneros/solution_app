@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/preventive_measures/prevencion_4.dart';
+import 'prevencion_2.dart';
 
-class PrevencionPage3 extends StatefulWidget {
-  const PrevencionPage3({super.key});
+class PrevencionPage1 extends StatefulWidget {
+  const PrevencionPage1({super.key});
 
   @override
-  State<PrevencionPage3> createState() => _PrevencionPage3State();
+  State<PrevencionPage1> createState() => _PrevencionPage1State();
 }
 
-class _PrevencionPage3State extends State<PrevencionPage3> {
+class _PrevencionPage1State extends State<PrevencionPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +19,24 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 6 y Texto 6
+            //Texto titulo
+
+            const Center(
+              child: SizedBox(
+                width: 287,
+                height: 96,
+                child: Text(
+                  "The WHO states that the only way to control or prevent the transmission of dengue is to fight against the transmitting mosquitoes.",
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+
+            //Imagen 1 y Texto 1
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
-              height: 128,
+              height: 144,
 
               //Diseño del contenedor
               decoration: BoxDecoration(
@@ -46,9 +59,9 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
-                        'images/prevencion_6.png',
-                        width: 128,
-                        height: 114,
+                        'images/prevencion_1.png',
+                        width: 136,
+                        height: 111,
                       ),
                     ),
                   ),
@@ -58,7 +71,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                      'Usar ropa que cubra brazos y piernas',
+                      "Clean and empty every week the containers where domestic water is stored.",
                     ),
                   ),
                 ],
@@ -67,11 +80,11 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 7 y Texto 7
+            //Imagen 2 y Texto 2
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
-              height: 128,
+              height: 144,
 
               //Diseño del contenedor
               decoration: BoxDecoration(
@@ -93,7 +106,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
                   const Expanded(
                     child: Center(
                       child: Text(
-                        'Cambie el agua de los floreros cada 3 días',
+                        "Properly dispose of solid waste.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -106,65 +119,16 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
-                        'images/prevencion_7.png',
-                        width: 132,
-                        height: 98,
+                        'images/prevencion_2.png',
+                        width: 108,
+                        height: 118,
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-
-            const SizedBox(height: 16.0),
-
-            //Imagen 8 y Texto 8
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
-
-              //Diseño del contenedor
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    //Diseño de la imagen
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_8.png',
-                        width: 150,
-                        height: 94,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Diseño del texto
-                  const Expanded(
-                    child: Text(
-                      'Tapé los recipientes que contengan agua (turriles, tanques, etc)',
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 40.0),
+            const SizedBox(height: 30.0),
           ],
         ),
       ),
@@ -175,7 +139,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const PrevencionPage4()));
+                    builder: (context) => const PrevencionPage2()));
           },
           icon: const Icon(Icons.chevron_right),
           label: const Text("Next")),

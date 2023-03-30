@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/dashboard.dart';
+import 'package:solution/app/pages/dashboard/dashboard.dart';
 
 class SymptomsPage2 extends StatefulWidget {
   const SymptomsPage2({super.key});
@@ -61,7 +61,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Dolor de cabeza intenso especialmente detras de los ojos',
+                        "Intense headache, especially behind the eyes.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -101,7 +101,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Fiebre alta (39°C/ 102°F) que dura de 2 a 7 días.',
+                        "High fever (39°C/102°F) that lasts for 2 to 7 days.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -141,7 +141,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Erupción cutánea que aparece después de  2 a 5 días de fiebre.',
+                        "Pain in the muscles and joints.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -181,7 +181,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Erupción cutánea que aparece después de  2 a 5 días de fiebre.',
+                        "Skin rash that appears after 2 to 5 days of fever.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -221,7 +221,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Náuseas y vómitos.',
+                        "Nausea and vomiting.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -261,7 +261,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Pérdida de apetito.',
+                        "Loss of appetite.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -301,7 +301,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Fatiga y debilidad.',
+                        "Fatigue and weakness.",
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -341,7 +341,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       ),
                       alignment: Alignment.center,
                       child: const Text(
-                        'Sangrado leve en las encías o la nariz.',
+                        "Mild bleeding in the gums or nose.",
                         textAlign: TextAlign.center,
                       ),
                     ),

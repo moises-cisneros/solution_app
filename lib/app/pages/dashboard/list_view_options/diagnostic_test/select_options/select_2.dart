@@ -10,11 +10,11 @@ class RegisterController2 extends StatefulWidget {
 class _RegisterControllerState extends State<RegisterController2> {
   final List<String> _options = [
     'Intense and continuous abdominal pain.',
-    'Dolor torácico o disnea',
+    'Chest pain or dyspnea',
     'Pleural effusion or pericardial effusion',
-    'Sangrado de mucosas (sangrado gingival, epistaxis, metrorragia e hipermenorrea)',
+    'Mucous bleeding (gingival bleeding, epistaxis, metrorrhagia and hypermenorrhea)',
     'Arterial hypertension',
-    'Disminución de la diuresis (disminución del volumen urinario)',
+    'Decreased diuresis (decreased urinary volume)',
     'Excessive decay or fainting',
     'Altered mental status (drowsiness, restlessness, irritability, or seizures)',
     'Hepatomegaly',

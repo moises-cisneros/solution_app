@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/dashboard.dart';
+import 'package:solution/app/pages/dashboard/dashboard.dart';
 
 class ReferencesPage extends StatefulWidget {
   const ReferencesPage({super.key});
@@ -59,7 +59,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        'Guía Nacional para el Manejo de la Enfermedad por el Virus de la Chikungunya'),
+                        'National Guide to Chikungunya Disease Management'),
                   ),
                 ],
               ),
@@ -97,7 +97,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        'Planificación de la Movilización y Comunicación Social para la Prevención y Control del Dengue'),
+                        'Planning of mobilization and social communication for the prevention and control of dengue'),
                   ),
                 ],
               ),
@@ -134,7 +134,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        'Algoritmos para el Manejo Clínico de los Casos de Dengue'),
+                        'Algorithms for the clinical management of dengue cases'),
                   ),
                 ],
               ),
@@ -171,7 +171,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        'Guía  para el Diagnóstico, Tratamiento, Prevención y Control'),
+                        'Guidelines for diagnosis, treatment, prevention and control'),
                   ),
                 ],
               ),

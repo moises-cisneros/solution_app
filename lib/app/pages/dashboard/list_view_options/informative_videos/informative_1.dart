@@ -1,35 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/dashboard.dart';
+import 'package:solution/app/pages/dashboard/list_view_options/informative_videos/informative_2.dart';
 
-class InformativePage2 extends StatefulWidget {
-  const InformativePage2({super.key});
+class InformativePage1 extends StatefulWidget {
+  const InformativePage1({super.key});
 
   @override
-  State<InformativePage2> createState() => _InformativePage2State();
+  State<InformativePage1> createState() => _InformativePage1State();
 }
 
-class _InformativePage2State extends State<InformativePage2> {
+class _InformativePage1State extends State<InformativePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Informative videos"),
-        actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DashboardPage()));
-              },
-              icon: const Icon(Icons.exit_to_app)),
-        ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 4 y Texto 4
+            //Imagen 1 y Texto 1
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
@@ -52,7 +42,7 @@ class _InformativePage2State extends State<InformativePage2> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'images/informative_4.png',
+                            'images/informative_1.png',
                             width: 127,
                             height: 94,
                           ),
@@ -77,7 +67,7 @@ class _InformativePage2State extends State<InformativePage2> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        '#SEDES ¿Sabes cuáles son las fases del dengue? Aquí te presentamos esta información a través...'),
+                        "#SEDES: Do you know how to prevent dengue? We present this information to you through Dr. Catherine A..."),
                   ),
                 ],
               ),
@@ -85,7 +75,7 @@ class _InformativePage2State extends State<InformativePage2> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 5 y Texto 5
+            //Imagen 2 y Texto 2
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
@@ -108,7 +98,7 @@ class _InformativePage2State extends State<InformativePage2> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'images/informative_5.png',
+                            'images/informative_2.png',
                             width: 127,
                             height: 94,
                           ),
@@ -133,14 +123,14 @@ class _InformativePage2State extends State<InformativePage2> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        '#SEDES ¿Dónde acudir en caso de presentar síntomas del dengue? Conoce más a cerca de esta ...'),
+                        "#SEDES: Is it okay to give my child vitamin C if they have symptoms of dengue? We present this information to you through Dr. Catherine A..."),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 16.0),
 
-            //Imagen 6 y Texto 6
+            //Imagen 3 y Texto 3
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
@@ -163,7 +153,7 @@ class _InformativePage2State extends State<InformativePage2> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'images/informative_6.png',
+                            'images/informative_3.png',
                             width: 127,
                             height: 94,
                           ),
@@ -188,7 +178,7 @@ class _InformativePage2State extends State<InformativePage2> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                        '#SEDES ¡La lucha continúa! Podemos prevenir el dengue realizando acciones sencillas y permanen...'),
+                        "#SEDES: Do you know how the critical phase of dengue presents itself in children? We present this information to you through Dr. Catherine A..."),
                   ),
                 ],
               ),
@@ -198,6 +188,17 @@ class _InformativePage2State extends State<InformativePage2> {
           ],
         ),
       ),
+
+      //Diseño del boton siguiente
+      floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const InformativePage2()));
+          },
+          icon: const Icon(Icons.chevron_right),
+          label: const Text("Next")),
     );
   }
 }

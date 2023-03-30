@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/diagnostic_test/register_1.dart';
-import 'package:solution/app/screens/diagnostic_test/register_2.dart';
-import 'package:solution/app/screens/diagnostic_test/register_3.dart';
-import 'package:solution/app/screens/diagnostic_test/test_controller.dart';
+import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/select_options/select_1.dart';
+import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/select_options/select_2.dart';
+import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/select_options/select_3.dart';
+import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/test_controller.dart';
 
 class TestPage1 extends StatefulWidget {
   const TestPage1({super.key});
@@ -16,28 +16,24 @@ class _TestPage1State extends State<TestPage1> {
   final controller = TestController();
 
   //Datos a registrar
-  String? valueOption;
-  String? selectOption;
+  String? option1;
+  String? option2;
+  String? option3;
+  String? option4;
+  String? option5;
+  String? option6;
+  String? option7;
 
-  //Lista para los errores
-  final List<String> _mistake = [];
-
-  //Eliminar errores
-  void deleteError({required String mistake}) {
-    if (_mistake.contains(mistake)) {
-      setState(() {
-        _mistake.remove(mistake);
-      });
-    }
-  }
-
-  //Agregar los errores
-  void addError({required String mistake}) {
-    if (!_mistake.contains(mistake)) {
-      setState(() {
-        _mistake.add(mistake);
-      });
-    }
+  @override
+  void initState() {
+    super.initState();
+    option1 = null;
+    option2 = null;
+    option3 = null;
+    option4 = null;
+    option5 = null;
+    option6 = null;
+    option7 = null;
   }
 
   //Registros de datos con mas opciones a elegir
@@ -60,6 +56,7 @@ class _TestPage1State extends State<TestPage1> {
     }
   }
 
+  //Cuando den a seleccionar se iran a otra pantalla con checklist
   void _navigateToOptions1() async {
     await _navigateToOptions(_selectedOptions1, const RegisterController1());
   }
@@ -97,10 +94,10 @@ class _TestPage1State extends State<TestPage1> {
                       const SizedBox(height: 16.0),
                       const Text('Biological sex'),
                       DropdownButtonFormField<String>(
-                        value: selectOption,
+                        value: option1,
                         onChanged: (value) {
                           setState(() {
-                            selectOption = value;
+                            option1 = value;
                           });
                         },
                         items: [
@@ -135,15 +132,25 @@ class _TestPage1State extends State<TestPage1> {
                             ),
                           ),
                         ],
+                        validator: (value) {
+                          if (value == null) {
+                            return 'Please select an option';
+                          } else if (option1 != value) {
+                            return 'Multiple options selected';
+                          }
+                          return null;
+                        },
                       ),
+
                       const SizedBox(height: 16.0),
-                      const Text('Edad'),
+                      const Text('Age'),
+
                       TextFormField(
                         decoration: const InputDecoration(
                             suffixIcon: Icon(Icons.access_time)),
                         keyboardType: TextInputType.number,
-                        validator: (valueOption) {
-                          if (valueOption!.isEmpty) {
+                        validator: (option2) {
+                          if (option2!.isEmpty) {
                             return 'Please enter a valid age';
                           }
                           return null;
@@ -155,8 +162,8 @@ class _TestPage1State extends State<TestPage1> {
                         decoration: const InputDecoration(
                             suffixIcon: Icon(Icons.fitness_center)),
                         keyboardType: TextInputType.number,
-                        validator: (valueOption) {
-                          if (valueOption!.isEmpty) {
+                        validator: (option3) {
+                          if (option3!.isEmpty) {
                             return 'Please enter a valid weight';
                           }
                           return null;
@@ -168,8 +175,8 @@ class _TestPage1State extends State<TestPage1> {
                         decoration: const InputDecoration(
                             suffixIcon: Icon(Icons.accessibility_new)),
                         keyboardType: TextInputType.number,
-                        validator: (valueOption) {
-                          if (valueOption!.isEmpty) {
+                        validator: (option4) {
+                          if (option4!.isEmpty) {
                             return 'Please enter a valid Size';
                           }
                           return null;
@@ -181,8 +188,8 @@ class _TestPage1State extends State<TestPage1> {
                         decoration: const InputDecoration(
                             suffixIcon: Icon(Icons.calendar_today)),
                         keyboardType: TextInputType.datetime,
-                        validator: (valueOption) {
-                          if (valueOption!.isEmpty) {
+                        validator: (option5) {
+                          if (option5!.isEmpty) {
                             return 'Please enter a valid date';
                           }
                           return null;
@@ -194,8 +201,8 @@ class _TestPage1State extends State<TestPage1> {
                         decoration: const InputDecoration(
                             suffixIcon: Icon(Icons.calendar_today)),
                         keyboardType: TextInputType.datetime,
-                        validator: (valueOption) {
-                          if (valueOption!.isEmpty) {
+                        validator: (option6) {
+                          if (option6!.isEmpty) {
                             return 'Please enter a valid date';
                           }
                           return null;
@@ -251,10 +258,10 @@ class _TestPage1State extends State<TestPage1> {
 
                       const Text('Blood pressure'),
                       DropdownButtonFormField<String>(
-                        value: selectOption,
+                        value: option7,
                         onChanged: (value) {
                           setState(() {
-                            selectOption = value;
+                            option7 = value;
                           });
                         },
                         items: [
@@ -290,6 +297,11 @@ class _TestPage1State extends State<TestPage1> {
                       ),
                     ],
                   )),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text('*PAD: Diastolic blood pressure'),
+              const Text('*PAS: Systolic blood pressure'),
               const SizedBox(
                 height: 40,
               ),

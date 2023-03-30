@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:solution/app/pages/dashboard/list_view_options/preventive_measures/prevencion_4.dart';
 
-import 'prevencion_3.dart';
-
-class PrevencionPage2 extends StatefulWidget {
-  const PrevencionPage2({super.key});
+class PrevencionPage3 extends StatefulWidget {
+  const PrevencionPage3({super.key});
 
   @override
-  State<PrevencionPage2> createState() => _PrevencionPage2State();
+  State<PrevencionPage3> createState() => _PrevencionPage3State();
 }
 
-class _PrevencionPage2State extends State<PrevencionPage2> {
+class _PrevencionPage3State extends State<PrevencionPage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +19,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 3 y Texto 3
+            //Imagen 6 y Texto 6
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
@@ -47,7 +46,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
-                        'images/prevencion_3.png',
+                        'images/prevencion_6.png',
                         width: 128,
                         height: 114,
                       ),
@@ -59,7 +58,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                      'Utilizar repelentes antimosquitos',
+                      'Wear clothes that cover arms and legs',
                     ),
                   ),
                 ],
@@ -68,7 +67,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 4 y Texto 4
+            //Imagen 7 y Texto 7
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
@@ -94,7 +93,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
                   const Expanded(
                     child: Center(
                       child: Text(
-                        'Eliminar las llantas que ya no se utilizan',
+                        'Change the water in the vases every 3 days',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -107,7 +106,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
-                        'images/prevencion_4.png',
+                        'images/prevencion_7.png',
                         width: 132,
                         height: 98,
                       ),
@@ -119,7 +118,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 5 y Texto 5
+            //Imagen 8 y Texto 8
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
@@ -146,7 +145,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
-                        'images/prevencion_5.png',
+                        'images/prevencion_8.png',
                         width: 150,
                         height: 94,
                       ),
@@ -158,7 +157,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                      'Utilizar mosquiteras para dormir',
+                      "Cover containers that hold water (barrels, tanks, etc.).",
                     ),
                   ),
                 ],
@@ -176,7 +175,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const PrevencionPage3()));
+                    builder: (context) => const PrevencionPage4()));
           },
           icon: const Icon(Icons.chevron_right),
           label: const Text("Next")),

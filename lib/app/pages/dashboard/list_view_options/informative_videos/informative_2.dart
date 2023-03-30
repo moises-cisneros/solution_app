@@ -1,25 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/informative_videos/informative_2.dart';
+import 'package:solution/app/pages/dashboard/dashboard.dart';
 
-class InformativePage1 extends StatefulWidget {
-  const InformativePage1({super.key});
+class InformativePage2 extends StatefulWidget {
+  const InformativePage2({super.key});
 
   @override
-  State<InformativePage1> createState() => _InformativePage1State();
+  State<InformativePage2> createState() => _InformativePage2State();
 }
 
-class _InformativePage1State extends State<InformativePage1> {
+class _InformativePage2State extends State<InformativePage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Informative videos"),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const DashboardPage()));
+              },
+              icon: const Icon(Icons.exit_to_app)),
+        ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 1 y Texto 1
+            //Imagen 4 y Texto 4
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
@@ -42,19 +52,19 @@ class _InformativePage1State extends State<InformativePage1> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'images/informative_1.png',
+                            'images/informative_4.png',
                             width: 127,
                             height: 94,
                           ),
                         ),
-                        // El reproductor de video encima de la imagen
+                        // El icono reproductor de video encima de la imagen
                         Center(
                           child: IconButton(
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
                             onPressed: () {
-                              // Aquí colocarías la lógica para reproducir el video
+                              // Aquí colocaremos la lógica para reproducir el video
                             },
                           ),
                         ),
@@ -66,17 +76,15 @@ class _InformativePage1State extends State<InformativePage1> {
 
                   //Diseño del texto
                   const Expanded(
-                    child: Text(
-                      '#SEDES ¿Sabes cómo prevenir el dengue? Te presentamos esta información a través de la Dra. Catherine A..',
-                    ),
-                  ),
+                      child: Text(
+                          "#SEDES: Do you know what the phases of dengue are? Here we present this information to you.")),
                 ],
               ),
             ),
 
             const SizedBox(height: 16.0),
 
-            //Imagen 2 y Texto 2
+            //Imagen 5 y Texto 5
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
@@ -99,19 +107,20 @@ class _InformativePage1State extends State<InformativePage1> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'images/informative_2.png',
+                            'images/informative_5.png',
                             width: 127,
                             height: 94,
                           ),
                         ),
-                        // El reproductor de video encima de la imagen
+
+                        // El icono de reproductor de video encima de la imagen
                         Center(
                           child: IconButton(
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
                             onPressed: () {
-                              // Aquí colocarías la lógica para reproducir el video
+                              // Aquí colocaremos la lógica para reproducir el video
                             },
                           ),
                         ),
@@ -124,15 +133,14 @@ class _InformativePage1State extends State<InformativePage1> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                      '#SEDES ¿Está bien que le dé vitamina C a mi niño con síntomas de dengue? Te presentamos esta inf...',
-                    ),
+                        "#SEDES: Where to go if you have dengue symptoms? Learn more about this."),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 16.0),
 
-            //Imagen 3 y Texto 3
+            //Imagen 6 y Texto 6
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
@@ -155,19 +163,19 @@ class _InformativePage1State extends State<InformativePage1> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'images/informative_3.png',
+                            'images/informative_6.png',
                             width: 127,
                             height: 94,
                           ),
                         ),
-                        // El reproductor de video encima de la imagen
+                        // El icono reproductor de video encima de la imagen
                         Center(
                           child: IconButton(
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
                             onPressed: () {
-                              // Aquí colocarías la lógica para reproducir el video
+                              // Aquí colocaremos la lógica para reproducir el video
                             },
                           ),
                         ),
@@ -180,8 +188,7 @@ class _InformativePage1State extends State<InformativePage1> {
                   //Diseño del texto
                   const Expanded(
                     child: Text(
-                      '#SEDES ¿Sabes cómo se presenta la fase crítica del dengue en los niños? Te presentamos esta inf...',
-                    ),
+                        "#SEDES: The fight continues! We can prevent dengue by taking simple and permanent actions. Learn more about this."),
                   ),
                 ],
               ),
@@ -191,17 +198,6 @@ class _InformativePage1State extends State<InformativePage1> {
           ],
         ),
       ),
-
-      //Diseño del boton siguiente
-      floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const InformativePage2()));
-          },
-          icon: const Icon(Icons.chevron_right),
-          label: const Text("Next")),
     );
   }
 }
