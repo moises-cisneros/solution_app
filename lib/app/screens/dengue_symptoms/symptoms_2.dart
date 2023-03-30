@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/home_dashboard.dart';
+import 'package:solution/app/screens/dashboard.dart';
 
 class SymptomsPage2 extends StatefulWidget {
   const SymptomsPage2({super.key});
@@ -20,7 +20,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ScreenDashboard()));
+                        builder: (context) => const DashboardPage()));
               },
               icon: const Icon(Icons.exit_to_app)),
         ],

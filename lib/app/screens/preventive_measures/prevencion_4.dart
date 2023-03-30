@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/screens/home_dashboard.dart';
+import 'package:solution/app/screens/dashboard.dart';
 
 class PrevencionPage4 extends StatefulWidget {
   const PrevencionPage4({super.key});
@@ -20,7 +20,7 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ScreenDashboard()));
+                        builder: (context) => const DashboardPage()));
               },
               icon: const Icon(Icons.exit_to_app)),
         ],

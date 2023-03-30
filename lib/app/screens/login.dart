@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:solution/app/screens/home_dashboard.dart';
+import 'package:solution/app/screens/dashboard.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ScreenDashboard()));
+                          builder: (context) => const DashboardPage()));
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -162,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ScreenDashboard()));
+                          builder: (context) => const DashboardPage()));
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

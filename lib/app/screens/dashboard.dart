@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:solution/app/screens/dengue_symptoms/symptoms_1.dart';
 import 'package:solution/app/screens/diagnostic_test/test_1.dart';
+import 'package:solution/app/screens/informative_videos/informative_1.dart';
 import 'package:solution/app/screens/preventive_measures/prevencion_1.dart';
+import 'package:solution/app/screens/references/references.dart';
 import 'login.dart';
 
-class ScreenDashboard extends StatefulWidget {
-  const ScreenDashboard({super.key});
+class DashboardPage extends StatefulWidget {
+  const DashboardPage({super.key});
 
   @override
-  State<ScreenDashboard> createState() => _ScreenDashboardState();
+  State<DashboardPage> createState() => _DashboardPageState();
 }
 
-class _ScreenDashboardState extends State<ScreenDashboard> {
+class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,12 +79,22 @@ class _ScreenDashboardState extends State<ScreenDashboard> {
             ListTile(
               leading: const Icon(Icons.video_collection),
               title: const Text('Informative videos'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const InformativePage1()));
+              },
             ),
             ListTile(
               leading: const Icon(Icons.open_in_new),
               title: const Text('References'),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ReferencesPage()));
+              },
             ),
 
             const Divider(
