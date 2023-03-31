@@ -58,3 +58,9 @@ If the application runs slowly or freezes, it might be due to a resource overloa
 
 `Issue: The application displays a blank screen when opened.`  
 If the application displays a blank screen when opened, there might have been a compilation error. Try cleaning the project and compiling it again. You can also try restarting the application and see if the issue persists. If none of these steps solve the issue, try seeking help in the Flutter documentation or the developer community for the platform.
+
+## Resources
+
+The Buzzbuster app can be found at the following link:
+
+Link: https://drive.google.com/drive/folders/1DvbLitop9J9yH2u3U7UPPLE4cS3kQMUd
