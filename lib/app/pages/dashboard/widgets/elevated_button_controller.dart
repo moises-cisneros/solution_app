@@ -11,14 +11,14 @@ class ButtonDevice extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () async {
-        //Pide permiso par acceder a la ubicacion
+        //Request permission to access the location
         var status = await Permission.locationWhenInUse.request();
         if (status.isGranted) {
-          //Agregaremos la pagina donde se encuentra el dispositivo en el mapa
+          //We will add the page where the device is located on the map
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const GoogleMapsPage()));
         } else {
-          // Si no se otorga el permiso de ubicación, muestra un diálogo o mensaje de error
+          // If location permission is not granted, displays a dialog or error message
           showDialog(
               context: context,
               builder: (BuildContext context) {

@@ -40,7 +40,7 @@ class TableDengueCases extends StatelessWidget {
           )
           .toList(),
 
-      //Diseño de la tabla
+      //Design of the table
       dataRowColor: MaterialStateColor.resolveWith(
           (states) => Colors.blue[50] ?? Colors.transparent),
       dataRowHeight: 60,

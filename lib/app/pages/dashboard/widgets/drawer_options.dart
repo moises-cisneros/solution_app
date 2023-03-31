@@ -17,7 +17,7 @@ class DrawerOptions extends StatelessWidget {
             accountName: Text('User name'),
             accountEmail: Text('correo@example.com'),
             currentAccountPicture: CircleAvatar(
-                //backgroundImage: AssetImage('assets/images/profile_image.jpg'),
+                //backgroundImage: AssetImage('assets/images/example_profile_image.jpg'),
                 ),
             margin: EdgeInsets.zero,
           ),
@@ -32,7 +32,7 @@ class DrawerOptions extends StatelessWidget {
             color: Colors.white,
           ),
 
-          //Opciones de las pantallas
+          //Options of the screens
           ListTile(
             leading: const Icon(Icons.warning),
             title: const Text('Preventive measures'),

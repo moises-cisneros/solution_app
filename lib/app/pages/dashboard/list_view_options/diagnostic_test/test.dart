@@ -15,7 +15,7 @@ class _TestPage1State extends State<TestPage1> {
   final _formkey = GlobalKey<FormState>();
   final controller = TestController();
 
-  //Datos a registrar
+  //Datos que deben registrarse
   String? option1;
   String? option2;
   String? option3;
@@ -36,7 +36,7 @@ class _TestPage1State extends State<TestPage1> {
     option7 = null;
   }
 
-  //Registros de datos con mas opciones a elegir
+  //Data logs with more options to choose from
   final List<String> _selectedOptions1 = [];
   final List<String> _selectedOptions2 = [];
   final List<String> _selectedOptions3 = [];
@@ -56,7 +56,7 @@ class _TestPage1State extends State<TestPage1> {
     }
   }
 
-  //Cuando den a seleccionar se iran a otra pantalla con checklist
+  //When you click select, you will go to another screen with a checklist
   void _navigateToOptions1() async {
     await _navigateToOptions(_selectedOptions1, const RegisterController1());
   }
@@ -86,12 +86,16 @@ class _TestPage1State extends State<TestPage1> {
               const SizedBox(
                 height: 20,
               ),
+
+              //Form design
               Form(
                   key: _formkey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 16.0),
+
+                      //Data entry #1
                       const Text('Biological sex'),
                       DropdownButtonFormField<String>(
                         value: option1,
@@ -143,8 +147,9 @@ class _TestPage1State extends State<TestPage1> {
                       ),
 
                       const SizedBox(height: 16.0),
-                      const Text('Age'),
 
+                      //Data entry #2
+                      const Text('Age'),
                       TextFormField(
                         decoration: const InputDecoration(
                             suffixIcon: Icon(Icons.access_time)),
@@ -156,7 +161,10 @@ class _TestPage1State extends State<TestPage1> {
                           return null;
                         },
                       ),
+
                       const SizedBox(height: 16.0),
+
+                      //Data entry #3
                       const Text('Weight'),
                       TextFormField(
                         decoration: const InputDecoration(
@@ -169,7 +177,10 @@ class _TestPage1State extends State<TestPage1> {
                           return null;
                         },
                       ),
+
                       const SizedBox(height: 16.0),
+
+                      //Data entry #4
                       const Text('Size'),
                       TextFormField(
                         decoration: const InputDecoration(
@@ -182,7 +193,10 @@ class _TestPage1State extends State<TestPage1> {
                           return null;
                         },
                       ),
+
                       const SizedBox(height: 16.0),
+
+                      //Data entry #5
                       const Text('Symptom onset date'),
                       TextFormField(
                         decoration: const InputDecoration(
@@ -195,7 +209,10 @@ class _TestPage1State extends State<TestPage1> {
                           return null;
                         },
                       ),
+
                       const SizedBox(height: 16.0),
+
+                      //Data entry #6
                       const Text('Evaluation date'),
                       TextFormField(
                         decoration: const InputDecoration(
@@ -211,13 +228,14 @@ class _TestPage1State extends State<TestPage1> {
 
                       const SizedBox(height: 16.0),
 
-                      //Registro extra #1
+                      //Data entry #7
                       Row(
                         children: [
                           const Expanded(
                             child: Text('Risk factors:'),
                           ),
                           ElevatedButton(
+                            //Registro extra #1
                             onPressed: _navigateToOptions1,
                             child: const Text('Seleccionar'),
                           ),
@@ -226,13 +244,14 @@ class _TestPage1State extends State<TestPage1> {
 
                       const SizedBox(height: 16.0),
 
-                      //Registro extra #2
+                      //Data entry #8
                       Row(
                         children: [
                           const Expanded(
                             child: Text('Warning signs:'),
                           ),
                           ElevatedButton(
+                            //Registro extra #2
                             onPressed: _navigateToOptions2,
                             child: const Text('Seleccionar'),
                           ),
@@ -241,13 +260,14 @@ class _TestPage1State extends State<TestPage1> {
 
                       const SizedBox(height: 16.0),
 
-                      //Registro extra #3
+                      //Data entry #9
                       Row(
                         children: [
                           const Expanded(
                             child: Text('signs of severity:'),
                           ),
                           ElevatedButton(
+                            //Registro extra #3
                             onPressed: _navigateToOptions3,
                             child: const Text('Seleccionar'),
                           ),
@@ -256,6 +276,7 @@ class _TestPage1State extends State<TestPage1> {
 
                       const SizedBox(height: 16.0),
 
+                      //Data entry #10
                       const Text('Blood pressure'),
                       DropdownButtonFormField<String>(
                         value: option7,
@@ -300,6 +321,8 @@ class _TestPage1State extends State<TestPage1> {
               const SizedBox(
                 height: 10,
               ),
+
+              //Clarifications
               const Text('*PAD: Diastolic blood pressure'),
               const Text('*PAS: Systolic blood pressure'),
               const SizedBox(

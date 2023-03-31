@@ -29,13 +29,13 @@ class _ReferencesPageState extends State<ReferencesPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 1 y Texto 1
+            //Image 1 and Text 1
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 294,
               height: 81,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -56,7 +56,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                         'National Guide to Chikungunya Disease Management'),
@@ -67,13 +67,13 @@ class _ReferencesPageState extends State<ReferencesPage> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 2 y Texto 2
+            //Image 2 and Text 2
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 294,
               height: 81,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -94,7 +94,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                         'Planning of mobilization and social communication for the prevention and control of dengue'),
@@ -104,13 +104,13 @@ class _ReferencesPageState extends State<ReferencesPage> {
             ),
             const SizedBox(height: 16.0),
 
-            //Imagen 3 y Texto 3
+            //Image 3 and Text 3
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 294,
               height: 65,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -131,7 +131,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                         'Algorithms for the clinical management of dengue cases'),
@@ -141,13 +141,13 @@ class _ReferencesPageState extends State<ReferencesPage> {
             ),
             const SizedBox(height: 16.0),
 
-            //Imagen 4 y Texto 4
+            //Image 4 and Text 4
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 294,
               height: 75,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -168,7 +168,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                         'Guidelines for diagnosis, treatment, prevention and control'),

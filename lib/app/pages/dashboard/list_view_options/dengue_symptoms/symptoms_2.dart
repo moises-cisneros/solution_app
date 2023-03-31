@@ -32,7 +32,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              //Sintoma 1
+              //Symptom 1
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +44,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -52,7 +52,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 58,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -69,7 +69,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
               //Sintoma 2
@@ -109,10 +109,10 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
-              //Sintoma 3
+              //Symptom 3
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -124,7 +124,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -132,7 +132,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 58,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -149,10 +149,10 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
-              //Sintoma 4
+              //Symptom 4
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -164,7 +164,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -172,7 +172,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 58,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -189,10 +189,10 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
-              //Sintoma 5
+              //Symptom 5
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -204,7 +204,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -212,7 +212,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 40,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -229,10 +229,10 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
-              //Sintoma 6
+              //Symptom 6
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -244,7 +244,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -252,7 +252,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 40,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -269,10 +269,10 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
-              //Sintoma 7
+              //Symptom 7
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -284,7 +284,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -292,7 +292,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 40,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -309,10 +309,10 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                 ),
               ),
 
-              //Separador entre columnas
+              //Separator between columns
               const SizedBox(height: 10.0),
 
-              //Sintoma 8
+              //Symptom 8
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -324,7 +324,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       height: 40,
                     ),
 
-                    //Separador entre filas
+                    //Separator between rows
                     const SizedBox(width: 16.0),
 
                     Container(
@@ -332,7 +332,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
                       width: 241,
                       height: 58,
 
-                      //Diseño del contenedor
+                      //Design of the container
                       decoration: BoxDecoration(
                         color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),

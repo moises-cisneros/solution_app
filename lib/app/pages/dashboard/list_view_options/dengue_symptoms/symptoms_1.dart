@@ -17,13 +17,13 @@ class _SymptomsPage1State extends State<SymptomsPage1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 1 y Texto 1
+            //Image 1 and Text 1
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 289,
               height: 112,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -37,8 +37,7 @@ class _SymptomsPage1State extends State<SymptomsPage1> {
                 ],
               ),
 
-              //Diseño del texto
-
+              //Design of the text
               child: const Center(
                 child: SizedBox(
                   child: Text(
@@ -59,7 +58,7 @@ class _SymptomsPage1State extends State<SymptomsPage1> {
           ],
         ),
       ),
-      //Diseño del boton siguiente
+      //Design of the next button
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.push(context,

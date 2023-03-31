@@ -29,13 +29,13 @@ class _InformativePage2State extends State<InformativePage2> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 4 y Texto 4
+            //Image 4 and Text 4
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
               height: 122,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -46,7 +46,7 @@ class _InformativePage2State extends State<InformativePage2> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: Stack(
                       children: [
                         ClipRRect(
@@ -57,14 +57,14 @@ class _InformativePage2State extends State<InformativePage2> {
                             height: 94,
                           ),
                         ),
-                        // El icono reproductor de video encima de la imagen
+                        // The video player icon above the image
                         Center(
                           child: IconButton(
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
                             onPressed: () {
-                              // Aquí colocaremos la lógica para reproducir el video
+                              // Here we will place the logic to play the video
                             },
                           ),
                         ),
@@ -74,7 +74,7 @@ class _InformativePage2State extends State<InformativePage2> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                       child: Text(
                           "#SEDES: Do you know what the phases of dengue are? Here we present this information to you.")),
@@ -84,13 +84,13 @@ class _InformativePage2State extends State<InformativePage2> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 5 y Texto 5
+            //Image 5 and Text 5
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
               height: 122,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -101,7 +101,7 @@ class _InformativePage2State extends State<InformativePage2> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: Stack(
                       children: [
                         ClipRRect(
@@ -113,14 +113,14 @@ class _InformativePage2State extends State<InformativePage2> {
                           ),
                         ),
 
-                        // El icono de reproductor de video encima de la imagen
+                        // The video player icon above the image
                         Center(
                           child: IconButton(
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
                             onPressed: () {
-                              // Aquí colocaremos la lógica para reproducir el video
+                              // Here we will place the logic to play the video
                             },
                           ),
                         ),
@@ -130,7 +130,7 @@ class _InformativePage2State extends State<InformativePage2> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                         "#SEDES: Where to go if you have dengue symptoms? Learn more about this."),
@@ -140,13 +140,13 @@ class _InformativePage2State extends State<InformativePage2> {
             ),
             const SizedBox(height: 16.0),
 
-            //Imagen 6 y Texto 6
+            //Image 6 and Text 6
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 295,
               height: 122,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
@@ -157,7 +157,7 @@ class _InformativePage2State extends State<InformativePage2> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    ///Design of the image
                     child: Stack(
                       children: [
                         ClipRRect(
@@ -168,14 +168,14 @@ class _InformativePage2State extends State<InformativePage2> {
                             height: 94,
                           ),
                         ),
-                        // El icono reproductor de video encima de la imagen
+                        // The video player icon above the image
                         Center(
                           child: IconButton(
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
                             onPressed: () {
-                              // Aquí colocaremos la lógica para reproducir el video
+                              // Here we will place the logic to play the video
                             },
                           ),
                         ),
@@ -185,7 +185,7 @@ class _InformativePage2State extends State<InformativePage2> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                         "#SEDES: The fight continues! We can prevent dengue by taking simple and permanent actions. Learn more about this."),

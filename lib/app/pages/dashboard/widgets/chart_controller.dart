@@ -10,10 +10,10 @@ class DengueData {
 class DengueChart {
   final List<DengueData> dengueData;
 
-  //Crea una lista de datos:
+  //Create a list of data:
   DengueChart(this.dengueData);
 
-  //Crea una serie de datos utilizando la lista creada en el paso anterior:
+  //Create a data series using the above list:
   charts.LineChart createChart() {
     final seriesList = [
       charts.Series<DengueData, int>(
@@ -25,7 +25,7 @@ class DengueChart {
       ),
     ];
 
-    //Crea el gráfico utilizando la serie de datos:
+    //Create the chart using the data series:
     return charts.LineChart(
       seriesList,
       animate: true,

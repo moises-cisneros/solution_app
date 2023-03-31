@@ -20,13 +20,13 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 3 y Texto 3
+            //Image 3 and Text 3
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 128,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -43,7 +43,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
@@ -56,7 +56,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                       "Use mosquito repellents.",
@@ -68,13 +68,13 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 4 y Texto 4
+            //Image 4 and Text 4
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 128,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -90,7 +90,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Center(
                       child: Text(
@@ -102,7 +102,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño de la imagen
+                  //Design of the image
                   Expanded(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -125,7 +125,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
               width: 304,
               height: 128,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -142,7 +142,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
@@ -155,7 +155,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                       'Use of mosquito nets',
@@ -170,7 +170,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
         ),
       ),
 
-      //Diseño del boton siguiente
+      //Design of the next button
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.push(

@@ -20,7 +20,7 @@ class _DashboardPageState extends State<DashboardPage> {
   void initState() {
     super.initState();
 
-    //Se crea una lista de datos ficticios para representar la evolución de los casos de dengue:
+    //A list of fictitious data is created to represent the evolution of dengue cases:
     dengueData = [
       DengueData(2015, 28510),
       DengueData(2016, 17311),
@@ -59,7 +59,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
 
                 Center(
-                    //Grafico sobre la evolucion de los casos del dengue
+                    //Graph on the evolution of dengue cases
                     child: SizedBox(
                         height: 350,
                         width: 350,
@@ -111,7 +111,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   height: 10,
                 ),
 
-                //Boton para mostrar el dispositivo
+                //Button to display the device
                 const ButtonDevice(),
               ],
             ),
@@ -119,7 +119,7 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
       ),
 
-      //Lista desplegable
+      //Drop down list
       drawer: const DrawerOptions(),
     );
   }

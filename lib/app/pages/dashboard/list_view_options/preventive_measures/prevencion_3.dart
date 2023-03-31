@@ -19,13 +19,13 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 6 y Texto 6
+            //Image 6 and Text 6
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 128,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -42,7 +42,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
@@ -55,7 +55,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                       'Wear clothes that cover arms and legs',
@@ -67,13 +67,13 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 7 y Texto 7
+            //Image 7 and Text 7
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 128,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -89,7 +89,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Center(
                       child: Text(
@@ -101,7 +101,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño de la imagen
+                  //Design of the image
                   Expanded(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -118,13 +118,13 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 8 y Texto 8
+            //Image 8 and Text 8
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 128,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -141,7 +141,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
@@ -154,7 +154,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                       "Cover containers that hold water (barrels, tanks, etc.).",
@@ -169,7 +169,7 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
         ),
       ),
 
-      //Diseño del boton siguiente
+      //Design of the next button
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.push(

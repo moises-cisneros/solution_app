@@ -3,21 +3,21 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class MapsController {
   final Map<MarkerId, Marker> markersDevice = {};
 
-  //Convierte los valores del map a set
+  // Converts the map values to a set
   Set<Marker> get marker => markersDevice.values.toSet();
 
-  //Posicion de la camara del mapa
+  // Position of the map camera
   final initialCameraPosition = const CameraPosition(
-    target: LatLng(-17.788792, -63.174853), //posicion parcial
+    target: LatLng(-17.788792, -63.174853), //partial position
     zoom: 13,
   );
 
-  //Agrega un nuevo marcador
+  // Adds a new marker
   void addMarker(double lat, double lng) {
     // Crear un nuevo MarkerId
     final newMarkerId = MarkerId(markersDevice.length.toString());
 
-    // Crear un nuevo Marker en la posición especificada
+    // Add the new Marker to the markersDevice map
     final newMarker = Marker(
       markerId: newMarkerId,
       position: LatLng(lat, lng),

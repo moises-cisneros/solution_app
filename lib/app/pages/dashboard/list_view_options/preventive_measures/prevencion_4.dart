@@ -29,13 +29,13 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Imagen 9 y Texto 9
+            //Image 9 and Text 9
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 297,
               height: 68,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -49,7 +49,7 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
                 ],
               ),
 
-              //Diseño del texto
+              //Design of the text
 
               child: const Center(
                 child: SizedBox(

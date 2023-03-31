@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    //Initial program
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

@@ -18,14 +18,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        //Diseño de la flecha de retroceder
+        //Design of the rear arrow
         elevation: 0.0,
         backgroundColor: Colors.white,
       ),
       body: ListView(
         padding: const EdgeInsets.all(40.0),
         children: <Widget>[
-          //Titulo
+          //Tttle
           Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.all(20.0),
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          //Contenedor del usuario
+          //Container of the user
           TextField(
             enableInteractiveSelection: false,
             autofocus: true,
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
             color: Colors.white,
           ),
 
-          //Contenedor de la contraseña
+          //Container of the password
           TextField(
             enableInteractiveSelection: false,
             obscureText: true,
@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
 
-          //Diseño del remember password
+          //Design of: remember password
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
             color: Colors.white,
           ),
 
-          //Boton de ingreso
+          //Boton: continue
           Column(children: [
             ElevatedButton(
                 onPressed: () {
@@ -122,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
             color: Colors.white,
           ),
 
-          //Data adicional
+          //Additional information
           Container(
               alignment: Alignment.center,
               child: const Text("You do not have an account?")),
@@ -131,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
             color: Colors.white,
           ),
 
-          //Boton de registro
+          //Registration button
           Column(children: [
             ElevatedButton(
                 onPressed: () {},
@@ -150,11 +150,11 @@ class _LoginPageState extends State<LoginPage> {
             color: Colors.white,
           ),
 
-          //Boton de skip
+          //Button: next
           Column(children: [
             ElevatedButton(
                 onPressed: () {
-                  //Navegacion hacia el screen dashboard
+                  //Navigation to the screen panel
                   Navigator.push(
                       context,
                       MaterialPageRoute(

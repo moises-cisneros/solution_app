@@ -12,7 +12,7 @@ class GoogleMapsPage extends StatefulWidget {
 class _GoogleMapsPageState extends State<GoogleMapsPage> {
   final _controller = MapsController();
 
-  //Database de marcadores de prueba
+  //Database of test markers
   final List<String> dataMarker = [
     '-17.788792',
     '-63.174853',
@@ -37,19 +37,18 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
   ];
 
   @override
-  //Iniciamos mostrando los marcadores cargados
+  //We start by showing the loaded markers
   void initState() {
     super.initState();
     loadMarker();
   }
 
-  //Carga marcadores al metodo addMarker
+  //Loading markers to the addMarker method
   void loadMarker() {
     for (var i = 0; i <= dataMarker.length - 2; i += 2) {
       final latPos = double.parse(dataMarker[i].trim());
       final lngPos = double.parse(dataMarker[i + 1].trim());
       _controller.addMarker(latPos, lngPos);
-      //_controller.loadMarker(-17.788792, -63.174853);
     }
     setState(() {});
   }
@@ -57,27 +56,27 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: const Text('DEVICE LOCATION'), //titulo
+          title: const Text('DEVICE LOCATION'), //title
         ),
         body: Stack(
           children: [
             Expanded(
-              //Api de mapas de google
+              // Google Maps API
               child: GoogleMap(
                 markers: _controller.marker,
                 initialCameraPosition: _controller.initialCameraPosition,
               ),
             ),
 
-            //Diseño de el mensaje de texto flotante
+            //Design of the floating text message
             AnimatedPositioned(
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeOut,
-                // Controla la posición horizontal del mensaje flotante
+                // Controls the horizontal position of the floating message
                 top: 16.0,
                 right: 16.0,
 
-                //Diseño del contenedor para el texto
+                //Container design for the text
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -94,7 +93,7 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
                       horizontal: 16.0, vertical: 8.0),
                   child: Column(
                     children: const [
-                      //Diseño del texto
+                      //Design of the text
                       Text(
                         "DISTRICT 4",
                         style: TextStyle(
@@ -117,7 +116,7 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
         // Boton flotante para mostar informacion sobre el dispositivo
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            //Diseño de la hoja modal
+            //Design of the modal blade
             showModalBottomSheet(
                 context: context,
                 builder: (BuildContext context) {
@@ -129,7 +128,7 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
 
-                        //Datos extras del dispositivo
+                        //Additional data of the device
                         children: <Widget>[
                           const Text('Information'),
                           const Text('Number of insects: 15293'),
@@ -165,13 +164,13 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
                 });
           },
 
-          //Diseño del boton
+          //Design of the button
           label: const Text('DETAILLS'),
           icon: const Icon(Icons.info_sharp),
           backgroundColor: Colors.blue,
         ),
 
-        //Aciones del boton flotante
+        //Aciones of the floating button
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       );

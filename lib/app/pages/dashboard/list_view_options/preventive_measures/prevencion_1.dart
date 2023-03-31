@@ -19,7 +19,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Texto titulo
+            //Title text
 
             const Center(
               child: SizedBox(
@@ -32,13 +32,13 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
               ),
             ),
 
-            //Imagen 1 y Texto 1
+            //Image 1 and Text 1
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 144,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -55,7 +55,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    //Diseño de la imagen
+                    //Design of the image
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
                       child: Image.asset(
@@ -68,7 +68,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Text(
                       "Clean and empty every week the containers where domestic water is stored.",
@@ -80,13 +80,13 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
 
             const SizedBox(height: 16.0),
 
-            //Imagen 2 y Texto 2
+            //Image 2 and Text 2
             Container(
               padding: const EdgeInsets.all(10.0),
               width: 304,
               height: 144,
 
-              //Diseño del contenedor
+              //Design of the container
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.grey, width: 2),
@@ -102,7 +102,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  //Diseño del texto
+                  //Design of the text
                   const Expanded(
                     child: Center(
                       child: Text(
@@ -114,7 +114,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
 
                   const SizedBox(width: 16.0),
 
-                  //Diseño de la imagen
+                  //Design of the image
                   Expanded(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -133,7 +133,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
         ),
       ),
 
-      //Diseño del boton siguiente
+      //Design of the next button
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.push(

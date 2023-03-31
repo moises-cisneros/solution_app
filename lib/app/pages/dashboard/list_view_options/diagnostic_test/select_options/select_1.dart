@@ -8,6 +8,7 @@ class RegisterController1 extends StatefulWidget {
 }
 
 class _RegisterControllerState extends State<RegisterController1> {
+  //List of fictitious data
   final List<String> _options = [
     'In pregnancy',
     'Child under 5 years',
@@ -17,6 +18,8 @@ class _RegisterControllerState extends State<RegisterController1> {
     'Patient with end-stage renal failure',
     'None of the above'
   ];
+
+  //Boolean list indicating whether an option has been selected or not.
   final List<bool> _selected = [
     false,
     false,
@@ -27,19 +30,20 @@ class _RegisterControllerState extends State<RegisterController1> {
     false
   ];
 
+  //This method updates the "_selected" list with the value selected in the corresponding index
   void _selectOption(int index, bool? selected) {
     setState(() {
       _selected[index] = selected!;
     });
   }
 
-  //Filtramos las opciones y si el valor es true entonces es agregada a la lista selectedOptions.
+  //We filter the options and if the value is true, it is added to the selectedOptions list.
   void _acceptSelection() {
     final selectedOptions = _options
         .where((option) => _selected[_options.indexOf(option)])
         .toList();
 
-    //Cerramos la pantalla actual y regresamos a la pantalla anterior.
+    //Close the current screen and return to the previous screen.
     Navigator.pop(context, selectedOptions);
   }
 
@@ -51,6 +55,7 @@ class _RegisterControllerState extends State<RegisterController1> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
+        //Create a list of options with checkboxes
         child: ListView.builder(
           itemCount: _options.length,
           itemBuilder: (context, index) => CheckboxListTile(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TestController {
-  //Boton aceptar datos
+  //Boton accept data
   SizedBox buttonAcept() {
     return SizedBox(
       width: 100,
