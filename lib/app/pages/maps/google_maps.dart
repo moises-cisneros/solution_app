@@ -145,7 +145,7 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
                               Column(
                                 children: const [
                                   Text("Dengue: 6002"),
-                                  Text("Coolex: 5780"),
+                                  Text("Culex: 5780"),
                                 ],
                               ),
                             ],
