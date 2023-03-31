@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solution/app/pages/dashboard/dashboard.dart';
-import 'package:solution/welcome.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -19,24 +18,8 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const WelcomePage()));
-              },
-              icon: const Icon(Icons.exit_to_app)),
-        ],
         //Diseño de la flecha de retroceder
         elevation: 0.0,
-        centerTitle: true,
-        leading: const Icon(
-          Icons.turn_left,
-          color: Colors.black,
-          size: 24.0,
-        ),
         backgroundColor: Colors.white,
       ),
       body: ListView(
@@ -79,7 +62,9 @@ class _LoginPageState extends State<LoginPage> {
             enableInteractiveSelection: false,
             obscureText: true,
             autofocus: true,
-            textCapitalization: TextCapitalization.characters,
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9]')),
+            ],
             decoration: InputDecoration(
               icon: const Icon(Icons.lock_outline),
               hintText: 'Password',
