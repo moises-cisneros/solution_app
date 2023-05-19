@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/select_options/select_1.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/select_options/select_2.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/select_options/select_3.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/test_controller.dart';
+import 'package:solution/pages/dashboard/list_view_options/diagnostic_test/select_options/select_1.dart';
+import 'package:solution/pages/dashboard/list_view_options/diagnostic_test/select_options/select_2.dart';
+import 'package:solution/pages/dashboard/list_view_options/diagnostic_test/select_options/select_3.dart';
+import 'package:solution/pages/dashboard/list_view_options/diagnostic_test/test_controller.dart';
 
 class TestPage1 extends StatefulWidget {
   const TestPage1({super.key});

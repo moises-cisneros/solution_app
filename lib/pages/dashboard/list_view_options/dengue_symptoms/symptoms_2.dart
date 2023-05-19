@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/pages/dashboard/dashboard.dart';
+import 'package:solution/pages/dashboard/dashboard.dart';
 
 class SymptomsPage2 extends StatefulWidget {
   const SymptomsPage2({super.key});

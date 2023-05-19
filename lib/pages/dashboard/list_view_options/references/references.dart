@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/pages/dashboard/dashboard.dart';
+import 'package:solution/pages/dashboard/dashboard.dart';
 
 class ReferencesPage extends StatefulWidget {
   const ReferencesPage({super.key});

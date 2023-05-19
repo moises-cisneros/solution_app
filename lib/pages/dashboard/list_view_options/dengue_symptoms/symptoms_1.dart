@@ -1,39 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/pages/dashboard/dashboard.dart';
+import 'package:solution/pages/dashboard/list_view_options/dengue_symptoms/symptoms_2.dart';
 
-class PrevencionPage4 extends StatefulWidget {
-  const PrevencionPage4({super.key});
+class SymptomsPage1 extends StatefulWidget {
+  const SymptomsPage1({super.key});
 
   @override
-  State<PrevencionPage4> createState() => _PrevencionPage4State();
+  State<SymptomsPage1> createState() => _SymptomsPage1State();
 }
 
-class _PrevencionPage4State extends State<PrevencionPage4> {
+class _SymptomsPage1State extends State<SymptomsPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Preventive measures"),
-        actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DashboardPage()));
-              },
-              icon: const Icon(Icons.exit_to_app)),
-        ],
-      ),
+      appBar: AppBar(title: const Text('Symptoms')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //Image 9 and Text 9
+            //Image 1 and Text 1
             Container(
               padding: const EdgeInsets.all(10.0),
-              width: 297,
-              height: 68,
+              width: 289,
+              height: 112,
 
               //Design of the container
               decoration: BoxDecoration(
@@ -50,11 +38,11 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
               ),
 
               //Design of the text
-
               child: const Center(
                 child: SizedBox(
                   child: Text(
-                    'We fight dengue together!',
+                    "The symptoms of dengue can vary from mild to severe and usually appear between 3 and 14 days after being bitten by an infected mosquito. Symptoms include:",
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
@@ -63,13 +51,21 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
             const SizedBox(height: 16.0),
 
             Image.asset(
-              'images/prevencion_9.png',
-              width: 286,
-              height: 304,
+              'images/sintomas_esquema.png',
+              width: 287,
+              height: 320,
             )
           ],
         ),
       ),
+      //Design of the next button
+      floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const SymptomsPage2()));
+          },
+          icon: const Icon(Icons.chevron_right),
+          label: const Text("Next")),
     );
   }
 }

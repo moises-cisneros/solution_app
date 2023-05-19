@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/dengue_symptoms/symptoms_1.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/diagnostic_test/test.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/informative_videos/informative_1.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
-import 'package:solution/app/pages/dashboard/list_view_options/references/references.dart';
+import 'package:solution/pages/dashboard/list_view_options/dengue_symptoms/symptoms_1.dart';
+import 'package:solution/pages/dashboard/list_view_options/diagnostic_test/test.dart';
+import 'package:solution/pages/dashboard/list_view_options/informative_videos/informative_1.dart';
+import 'package:solution/pages/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
+import 'package:solution/pages/dashboard/list_view_options/references/references.dart';
 
 class DrawerOptions extends StatelessWidget {
   const DrawerOptions({super.key});

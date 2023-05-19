@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:solution/app/pages/maps/google_maps.dart';
+import 'package:solution/pages/maps/google_maps.dart';
 
 class ButtonDevice extends StatelessWidget {
   const ButtonDevice({super.key});
