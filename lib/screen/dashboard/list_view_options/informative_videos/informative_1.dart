@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/pages/dashboard/list_view_options/informative_videos/informative_2.dart';
+import 'package:solution/screen/dashboard/list_view_options/informative_videos/informative_2.dart';
 
 class InformativePage1 extends StatefulWidget {
   const InformativePage1({super.key});

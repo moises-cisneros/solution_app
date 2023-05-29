@@ -24,7 +24,7 @@ class _StorageImageState extends State<StorageImage> {
 
   Future<void> getImage() async {
     //Recupera la referencia de la imagen
-    final ref = storage.ref().child('informative_1.png');
+    final ref = storage.ref().child('reference_1.png');
     final getUrl = await ref.getDownloadURL();
 
     setState(() {
@@ -32,23 +32,19 @@ class _StorageImageState extends State<StorageImage> {
     });
   }
 
+  //Implementacion del storage V1 y mejorada: Funciona
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('data'),
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 300,
-            child: Image(
-              image: NetworkImage(url),
-              fit: BoxFit.cover,
-            ),
-          )
-        ],
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('data'),
+        ),
+        body: SizedBox(
+          width: 200,
+          height: 200,
+          child: url == ""
+              ? const Center(child: CircularProgressIndicator())
+              : Image.network(url),
+        ));
   }
 }

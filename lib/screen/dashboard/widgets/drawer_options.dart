@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:solution/pages/dashboard/list_view_options/dengue_symptoms/symptoms_1.dart';
-import 'package:solution/pages/dashboard/list_view_options/diagnostic_test/test.dart';
-import 'package:solution/pages/dashboard/list_view_options/informative_videos/informative_1.dart';
-import 'package:solution/pages/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
-import 'package:solution/pages/dashboard/list_view_options/references/references.dart';
+import 'package:solution/screen/dashboard/list_view_options/dengue_symptoms/symptoms_1.dart';
+import 'package:solution/screen/dashboard/list_view_options/diagnostic_test/test.dart';
+import 'package:solution/screen/dashboard/list_view_options/informative_videos/informative_1.dart';
+import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
+import 'package:solution/screen/dashboard/list_view_options/references/references.dart';
+import 'package:solution/screen/home/screen_home.dart';
 
 class DrawerOptions extends StatelessWidget {
   const DrawerOptions({super.key});
@@ -79,6 +80,15 @@ class DrawerOptions extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ReferencesPage()));
+            },
+          ),
+
+          ListTile(
+            leading: const Icon(Icons.open_in_new),
+            title: const Text('Prueba'),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()));
             },
           ),
 

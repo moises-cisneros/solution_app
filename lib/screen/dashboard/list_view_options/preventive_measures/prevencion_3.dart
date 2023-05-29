@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/pages/dashboard/list_view_options/preventive_measures/prevencion_4.dart';
+import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_4.dart';
 
 class PrevencionPage3 extends StatefulWidget {
   const PrevencionPage3({super.key});

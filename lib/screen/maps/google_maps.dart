@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:solution/pages/maps/maps_controller.dart';
+import 'package:solution/screen/maps/maps_controller.dart';
 
 class GoogleMapsPage extends StatefulWidget {
   const GoogleMapsPage({super.key});

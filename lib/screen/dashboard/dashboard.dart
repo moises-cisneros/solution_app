@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:solution/pages/dashboard/widgets/chart_controller.dart';
-import 'package:solution/pages/dashboard/widgets/drawer_options.dart';
-import 'package:solution/pages/dashboard/widgets/elevated_button_controller.dart';
-import 'package:solution/pages/dashboard/widgets/table_cases_dengue.dart';
+import 'package:solution/screen/dashboard/widgets/chart_controller.dart';
+import 'package:solution/screen/dashboard/widgets/drawer_options.dart';
+import 'package:solution/screen/dashboard/widgets/elevated_button_controller.dart';
+import 'package:solution/screen/dashboard/widgets/table_cases_dengue.dart';
 import '../login/login.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
