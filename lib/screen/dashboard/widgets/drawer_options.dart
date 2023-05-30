@@ -4,7 +4,6 @@ import 'package:solution/screen/dashboard/list_view_options/diagnostic_test/test
 import 'package:solution/screen/dashboard/list_view_options/informative_videos/informative_1.dart';
 import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
 import 'package:solution/screen/dashboard/list_view_options/references/references.dart';
-
 import 'custom_card.dart';
 
 class DrawerOptions extends StatelessWidget {
@@ -100,8 +99,6 @@ class DrawerOptions extends StatelessWidget {
                       builder: (context) => const ReferencesPage()));
             },
           ),
-
-          CustomCard(icon: Icons.settings, text: "Settings", onTap: () {}),
 
           const Divider(
             height: 5.0,
