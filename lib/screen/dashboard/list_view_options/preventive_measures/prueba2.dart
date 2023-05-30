@@ -1,16 +1,19 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:solution/controllers/storage_image_controller/preventive_measures_controllers/prevencion_1_controller.dart';
 import 'package:solution/screen/dashboard/widgets/custom_image_container.dart';
+
 import 'prevencion_2.dart';
 
-class PrevencionPage1 extends StatefulWidget {
-  const PrevencionPage1({super.key});
+class PruebaDartScreen extends StatefulWidget {
+  const PruebaDartScreen({Key? key}) : super(key: key);
 
   @override
-  State<PrevencionPage1> createState() => _PrevencionPage1State();
+  _PruebaDartScreenState createState() => _PruebaDartScreenState();
 }
 
-class _PrevencionPage1State extends State<PrevencionPage1> {
+class _PruebaDartScreenState extends State<PruebaDartScreen> {
   final PrevencionScreen1Controller _controller = PrevencionScreen1Controller();
   late Future<void> _initializeData;
 
@@ -24,7 +27,7 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Preventive measures"),
+        title: const Text("Preventive measures 2"),
       ),
       body: FutureBuilder<void>(
         future: _initializeData,

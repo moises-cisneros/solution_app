@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:solution/controllers/storage_image_controller/preventive_measures_controllers/prevencion_3_controller.dart';
 import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_4.dart';
+import 'package:solution/screen/dashboard/widgets/custom_image_container.dart';
 
 class PrevencionPage3 extends StatefulWidget {
   const PrevencionPage3({super.key});
@@ -9,6 +11,15 @@ class PrevencionPage3 extends StatefulWidget {
 }
 
 class _PrevencionPage3State extends State<PrevencionPage3> {
+  final PrevencionScreen3Controller _controller = PrevencionScreen3Controller();
+  late Future<void> _initializeData;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeData = _controller.initialize();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,157 +27,42 @@ class _PrevencionPage3State extends State<PrevencionPage3> {
         title: const Text("Preventive measures"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //Image 6 and Text 6
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
+        child: FutureBuilder<void>(
+            future: _initializeData,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CircularProgressIndicator());
+              } else if (snapshot.hasError) {
+                return const Center(child: Text("Error occurred"));
+              } else {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    //Image 6 and Text 6
+                    CustomImageContainer(
+                        imageUrl: _controller.urlImage1,
+                        text: 'Wear clothes that cover arms and legs'),
 
-              //Design of the container
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
+                    const SizedBox(height: 16.0),
 
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    //Design of the image
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_6.png',
-                        width: 128,
-                        height: 114,
-                      ),
-                    ),
-                  ),
+                    //Image 7 and Text 7
+                    CustomImageContainer(
+                        imageUrl: _controller.urlImage2,
+                        text: 'Change the water in the vases every 3 days'),
 
-                  const SizedBox(width: 16.0),
+                    const SizedBox(height: 16.0),
 
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                      'Wear clothes that cover arms and legs',
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                    //Image 8 and Text 8
+                    CustomImageContainer(
+                        imageUrl: _controller.urlImage3,
+                        text:
+                            "Cover containers that hold water (barrels, tanks, etc.)."),
 
-            const SizedBox(height: 16.0),
-
-            //Image 7 and Text 7
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
-
-              //Design of the container
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  //Design of the text
-                  const Expanded(
-                    child: Center(
-                      child: Text(
-                        'Change the water in the vases every 3 days',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the image
-                  Expanded(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_7.png',
-                        width: 132,
-                        height: 98,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 16.0),
-
-            //Image 8 and Text 8
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
-
-              //Design of the container
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    //Design of the image
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_8.png',
-                        width: 150,
-                        height: 94,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                      "Cover containers that hold water (barrels, tanks, etc.).",
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 40.0),
-          ],
-        ),
+                    const SizedBox(height: 40.0),
+                  ],
+                );
+              }
+            }),
       ),
 
       //Design of the next button

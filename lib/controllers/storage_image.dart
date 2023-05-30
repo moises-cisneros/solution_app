@@ -9,14 +9,14 @@ class StorageImage extends StatefulWidget {
 }
 
 class _StorageImageState extends State<StorageImage> {
-  late String url;
+  late String urlImage;
   final storage = FirebaseStorage.instance;
 
   @override
   void initState() {
     super.initState();
     //Coloca el valor initial de la cadena en vacio
-    url = '';
+    urlImage = '';
 
     //Recupera la imagen desde el Firebase Storage
     getImage();
@@ -28,7 +28,7 @@ class _StorageImageState extends State<StorageImage> {
     final getUrl = await ref.getDownloadURL();
 
     setState(() {
-      url = getUrl;
+      urlImage = getUrl;
     });
   }
 
@@ -42,9 +42,9 @@ class _StorageImageState extends State<StorageImage> {
         body: SizedBox(
           width: 200,
           height: 200,
-          child: url == ""
+          child: urlImage == ""
               ? const Center(child: CircularProgressIndicator())
-              : Image.network(url),
+              : Image.network(urlImage),
         ));
   }
 }

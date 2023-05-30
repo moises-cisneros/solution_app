@@ -1,355 +1,104 @@
 import 'package:flutter/material.dart';
+import 'package:solution/controllers/storage_image_controller/symptoms_controller/symptoms_2_controller.dart';
 import 'package:solution/screen/dashboard/dashboard.dart';
+import 'package:solution/screen/dashboard/widgets/item_image_text.dart';
 
 class SymptomsPage2 extends StatefulWidget {
-  const SymptomsPage2({super.key});
+  const SymptomsPage2({Key? key}) : super(key: key);
 
   @override
   State<SymptomsPage2> createState() => _SymptomsPage2State();
 }
 
 class _SymptomsPage2State extends State<SymptomsPage2> {
+  final SymptomsScreen2Controller _controller = SymptomsScreen2Controller();
+  late Future<void> _initializeData;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeData = _controller.initialize();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dengue sympyoms'),
+        title: const Text('Dengue symptoms'),
         actions: <Widget>[
           IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DashboardPage()));
-              },
-              icon: const Icon(Icons.exit_to_app)),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DashboardPage(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.exit_to_app),
+          ),
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              //Symptom 1
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_1.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 58,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
+          child: FutureBuilder<void>(
+              future: _initializeData,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return const Center(child: Text("Error occurred"));
+                } else {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SymptomItem(
+                        imageUrl: _controller.urlImage1,
+                        text: 'Intense headache, especially behind the eyes.',
                       ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Intense headache, especially behind the eyes.",
-                        textAlign: TextAlign.center,
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage2,
+                        text:
+                            'High fever (39°C/102°F) that lasts for 2 to 7 days.',
                       ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Sintoma 2
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_2.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separador entre filas
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 58,
-
-                      //Diseño del contenedor
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage3,
+                        text: 'Pain in the muscles and joints.',
                       ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "High fever (39°C/102°F) that lasts for 2 to 7 days.",
-                        textAlign: TextAlign.center,
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage4,
+                        text:
+                            'Skin rash that appears after 2 to 5 days of fever.',
                       ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Symptom 3
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_3.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 58,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage5,
+                        text: 'Nausea and vomiting.',
                       ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Pain in the muscles and joints.",
-                        textAlign: TextAlign.center,
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage6,
+                        text: 'Loss of appetite.',
                       ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Symptom 4
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_4.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 58,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage7,
+                        text: 'Fatigue and weakness.',
                       ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Skin rash that appears after 2 to 5 days of fever.",
-                        textAlign: TextAlign.center,
+                      const SizedBox(height: 10.0),
+                      SymptomItem(
+                        imageUrl: _controller.urlImage8,
+                        text: 'Mild bleeding in the gums or nose.',
                       ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Symptom 5
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_5.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 40,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Nausea and vomiting.",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Symptom 6
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_6.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 40,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Loss of appetite.",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Symptom 7
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_7.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 40,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Fatigue and weakness.",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              //Separator between columns
-              const SizedBox(height: 10.0),
-
-              //Symptom 8
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/sintomas_8.png',
-                      width: 40,
-                      height: 40,
-                    ),
-
-                    //Separator between rows
-                    const SizedBox(width: 16.0),
-
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      width: 241,
-                      height: 58,
-
-                      //Design of the container
-                      decoration: BoxDecoration(
-                        color: Colors.grey.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(
-                            color: Colors.grey.withOpacity(0.5), width: 2),
-                      ),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "Mild bleeding in the gums or nose.",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+                    ],
+                  );
+                }
+              }),
         ),
       ),
     );
