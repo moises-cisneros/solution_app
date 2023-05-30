@@ -100,6 +100,8 @@ class DrawerOptions extends StatelessWidget {
             },
           ),
 
+          CustomCard(icon: Icons.settings, text: "Settings", onTap: () {}),
+
           const Divider(
             height: 5.0,
             color: Colors.blue,
