@@ -5,47 +5,64 @@ import 'package:solution/screen/dashboard/list_view_options/informative_videos/i
 import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
 import 'package:solution/screen/dashboard/list_view_options/references/references.dart';
 
+import 'custom_card.dart';
+
 class DrawerOptions extends StatelessWidget {
   const DrawerOptions({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      //backgroundColor: Colors.lightBlue,
       child: ListView(
         children: [
           const UserAccountsDrawerHeader(
-            accountName: Text('User name'),
-            accountEmail: Text('correo@example.com'),
+            accountName: Text(
+              'User name',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+            accountEmail: Text(
+              'correo@example.com',
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
             currentAccountPicture: CircleAvatar(
-                //backgroundImage: AssetImage('assets/images/example_profile_image.jpg'),
-                ),
+              backgroundImage: AssetImage('images/profile.jpg'),
+            ),
             margin: EdgeInsets.zero,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.pink, Colors.orange, Colors.yellow],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
           ),
 
-          ListTile(
-            leading: const Icon(Icons.edit),
-            title: const Text('Edit profile'),
+          CustomCard(
+            icon: Icons.edit,
+            text: 'Edit profile',
             onTap: () {},
-          ),
-          const Divider(
-            height: 18.0,
-            color: Colors.white,
           ),
 
           //Options of the screens
-          ListTile(
-            leading: const Icon(Icons.warning),
-            title: const Text('Preventive measures'),
+          CustomCard(
+            icon: Icons.warning,
+            text: 'Preventive measures',
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const PrevencionPage1()));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PrevencionPage1(),
+                ),
+              );
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.sick_outlined),
-            title: const Text('Dengue symptoms'),
+
+          CustomCard(
+            icon: Icons.sick_outlined,
+            text: 'Dengue symptoms',
             onTap: () {
               Navigator.push(
                   context,
@@ -53,17 +70,18 @@ class DrawerOptions extends StatelessWidget {
                       builder: (context) => const SymptomsPage1()));
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.receipt_long_outlined),
-            title: const Text('Diagnostic test'),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const TestPage1()));
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.video_collection),
-            title: const Text('Informative videos'),
+
+          CustomCard(
+              icon: Icons.receipt_long_outlined,
+              text: 'Diagnostic test',
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const TestPage1()));
+              }),
+
+          CustomCard(
+            icon: Icons.video_collection,
+            text: 'Informative videos',
             onTap: () {
               Navigator.push(
                   context,
@@ -71,9 +89,10 @@ class DrawerOptions extends StatelessWidget {
                       builder: (context) => const InformativePage1()));
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.open_in_new),
-            title: const Text('References'),
+
+          CustomCard(
+            icon: Icons.open_in_new,
+            text: 'References',
             onTap: () {
               Navigator.push(
                   context,
@@ -82,9 +101,11 @@ class DrawerOptions extends StatelessWidget {
             },
           ),
 
+          CustomCard(icon: Icons.settings, text: "Settings", onTap: () {}),
+
           const Divider(
-            height: 25.0,
-            color: Colors.white,
+            height: 5.0,
+            color: Colors.blue,
           ),
 
           Column(

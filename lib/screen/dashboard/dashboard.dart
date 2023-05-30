@@ -3,7 +3,7 @@ import 'package:solution/screen/dashboard/widgets/chart_controller.dart';
 import 'package:solution/screen/dashboard/widgets/drawer_options.dart';
 import 'package:solution/screen/dashboard/widgets/elevated_button_controller.dart';
 import 'package:solution/screen/dashboard/widgets/table_cases_dengue.dart';
-import '../login/login.dart';
+import 'package:flutter/services.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class DashboardPage extends StatefulWidget {
@@ -38,52 +38,127 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(actions: <Widget>[
-        IconButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const LoginPage()));
-            },
-            icon: const Icon(Icons.exit_to_app)),
-      ]),
+      backgroundColor: const Color.fromARGB(255, 171, 225, 235),
+      appBar: AppBar(
+          title: const Text('DASHBOARD'),
+          //backgroundColor: const Color.fromARGB(255, 238, 207, 104),
+          backgroundColor: Colors.amber,
+          actions: <Widget>[
+            IconButton(
+              tooltip: "Exit",
+              onPressed: () {
+                SystemNavigator.pop(); // Cierra la aplicación
+              },
+              icon: const Icon(Icons.exit_to_app),
+            )
+          ]),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Card(
+                  color: Colors.amber,
+                  child: Container(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        //Device Map
+                        Card(
+                          elevation: 4.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)),
+                          child: Container(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              children: [
+                                const Text(
+                                  'MAP: VIEW OF ALL MOSQUITO TRAP DEVICES',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const [
+                                      Icon(
+                                        Icons.map,
+                                        color: Colors.blue,
+                                        size: 40.0,
+                                      ),
+
+                                      SizedBox(
+                                        width: 16.0,
+                                      ),
+
+                                      //Button to display the device
+                                      ButtonDevice(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(
+                          height: 20,
+                        ),
+
+                        //Device Map
+                        Card(
+                          elevation: 4.0,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)),
+                          child: Container(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              children: const [
+                                Text(
+                                  'DASHBOARD',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+
                 const Text(
                   'EVOLUTION OF THE NUMBER OF DENGUE CASES OVER THE YEARS',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-
-                Center(
-                    //Graph on the evolution of dengue cases
-                    child: SizedBox(
-                        height: 350,
-                        width: 350,
-                        child: Expanded(child: chart))),
-
+                SizedBox(width: 350, height: 350, child: chart),
                 const SizedBox(
                   height: 20,
                 ),
 
+                //Table of dengue case
                 const Text(
                   'TABLE OF DENGUE CASE',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-
                 const SizedBox(
                   height: 20,
                 ),
-
                 TableDengueCases(),
 
                 const SizedBox(
                   height: 5,
                 ),
 
+                //Total text
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
@@ -97,22 +172,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     ),
                   ),
                 ),
-
                 const SizedBox(
                   height: 20,
                 ),
-
-                const Text(
-                  'MAP: VIEW OF ALL MOSQUITO TRAP DEVICES',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-
-                const SizedBox(
-                  height: 10,
-                ),
-
-                //Button to display the device
-                const ButtonDevice(),
               ],
             ),
           ),

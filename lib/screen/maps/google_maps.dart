@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:solution/screen/maps/device_information_modal.dart';
 import 'package:solution/screen/maps/maps_controller.dart';
 
 class GoogleMapsPage extends StatefulWidget {
@@ -116,56 +117,13 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
         // Boton flotante para mostar informacion sobre el dispositivo
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            //Design of the modal blade
             showModalBottomSheet(
                 context: context,
                 builder: (BuildContext context) {
-                  return Container(
-                    height: 200,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-
-                        //Additional data of the device
-                        children: <Widget>[
-                          const Text('Information'),
-                          const Text('Number of insects: 15293'),
-                          const SizedBox(
-                            height: 16.0,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text('Insect: Mosquito:'),
-                              const SizedBox(
-                                width: 20.0,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("Dengue: 6002"),
-                                  Text("Culex: 5780"),
-                                ],
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20.0,
-                          ),
-                          ElevatedButton(
-                            child: const Text('CLOSE'),
-                            onPressed: () => Navigator.pop(context),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
+                  return const DeviceInformationModal();
                 });
           },
-
-          //Design of the button
-          label: const Text('DETAILLS'),
+          label: const Text('DETAILS'),
           icon: const Icon(Icons.info_sharp),
           backgroundColor: Colors.blue,
         ),

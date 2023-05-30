@@ -39,7 +39,7 @@ class DengueChart {
               labelStyle: const charts.TextStyleSpec(
                   color: charts.MaterialPalette.black),
               lineStyle: charts.LineStyleSpec(
-                  color: charts.MaterialPalette.gray.shade400))),
+                  color: charts.MaterialPalette.gray.shade900))),
       primaryMeasureAxis: charts.NumericAxisSpec(
           tickProviderSpec:
               const charts.BasicNumericTickProviderSpec(zeroBound: false),
@@ -48,7 +48,7 @@ class DengueChart {
               labelStyle: const charts.TextStyleSpec(
                   color: charts.MaterialPalette.black),
               lineStyle: charts.LineStyleSpec(
-                  color: charts.MaterialPalette.gray.shade400))),
+                  color: charts.MaterialPalette.gray.shade900))),
       behaviors: [
         charts.SeriesLegend(
             position: charts.BehaviorPosition.bottom,
