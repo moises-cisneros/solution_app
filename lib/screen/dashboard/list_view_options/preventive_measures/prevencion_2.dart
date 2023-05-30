@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solution/controllers/storage_image_controller/preventive_measures_controllers/prevencion_2_controller.dart';
+import 'package:solution/screen/dashboard/widgets/custom_image_container.dart';
 
 import 'prevencion_3.dart';
 
@@ -10,6 +12,15 @@ class PrevencionPage2 extends StatefulWidget {
 }
 
 class _PrevencionPage2State extends State<PrevencionPage2> {
+  final PrevencionScreen2Controller _controller = PrevencionScreen2Controller();
+  late Future<void> _initializeData;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeData = _controller.initialize();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,169 +28,60 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
         title: const Text("Preventive measures"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //Image 3 and Text 3
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
-
-              //Design of the container
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    //Design of the image
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_3.png',
-                        width: 128,
-                        height: 114,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                      "Use mosquito repellents.",
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 16.0),
-
-            //Image 4 and Text 4
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
-
-              //Design of the container
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-              child: Row(
+        child: FutureBuilder<void>(
+          future: _initializeData,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            } else if (snapshot.hasError) {
+              return const Center(child: Text("Error occurred"));
+            } else {
+              return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  //Design of the text
-                  const Expanded(
-                    child: Center(
-                      child: Text(
-                        'Remove tyres that are no longer used',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                children: [
+                  // Image 3 and Text 3
+                  CustomImageContainer(
+                    imageUrl: _controller.urlImage1,
+                    text: "Use mosquito repellents.",
                   ),
 
-                  const SizedBox(width: 16.0),
+                  const SizedBox(height: 16.0),
 
-                  //Design of the image
-                  Expanded(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_4.png',
-                        width: 132,
-                        height: 98,
-                      ),
-                    ),
+                  // Image 4 and Text 4
+                  CustomImageContainer(
+                    imageUrl: _controller.urlImage2,
+                    text: "Remove tyres that are no longer used.",
                   ),
+
+                  const SizedBox(height: 16.0),
+
+                  // Image 5 and Text 5
+                  CustomImageContainer(
+                    imageUrl: _controller.urlImage3,
+                    text: "Use of mosquito nets.",
+                  ),
+
+                  const SizedBox(height: 40.0),
                 ],
-              ),
-            ),
-
-            const SizedBox(height: 16.0),
-
-            //Imagen 5 y Texto 5
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 304,
-              height: 128,
-
-              //Design of the container
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.grey, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 5,
-                    offset: const Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    //Design of the image
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        'images/prevencion_5.png',
-                        width: 150,
-                        height: 94,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                      'Use of mosquito nets',
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 40.0),
-          ],
+              );
+            }
+          },
         ),
       ),
 
-      //Design of the next button
+      // Design of the next button
       floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const PrevencionPage3()));
-          },
-          icon: const Icon(Icons.chevron_right),
-          label: const Text("Next")),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const PrevencionPage3(),
+            ),
+          );
+        },
+        icon: const Icon(Icons.chevron_right),
+        label: const Text("Next"),
+      ),
     );
   }
 }
