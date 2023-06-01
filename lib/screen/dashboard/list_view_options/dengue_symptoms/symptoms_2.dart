@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:solution/controllers/storage_image_controller/symptoms_controller/symptoms_2_controller.dart';
+import 'package:solution/controllers/storage_image_symptoms_controller/symptoms_2_controller.dart';
 import 'package:solution/screen/dashboard/dashboard.dart';
-import 'package:solution/screen/dashboard/widgets/item_image_text.dart';
+import 'package:solution/widgets/item_image_text.dart';
 
 class SymptomsPage2 extends StatefulWidget {
   const SymptomsPage2({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solution/controllers/storage_image_controller/preventive_measures_controllers/prevencion_4_controller.dart';
+import 'package:solution/controllers/storage_image_preventive_controllers/prevencion_4_controller.dart';
 import 'package:solution/screen/dashboard/dashboard.dart';
 
 class PrevencionPage4 extends StatefulWidget {

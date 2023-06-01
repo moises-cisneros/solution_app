@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:solution/controllers/storage_image_controller/symptoms_controller/symptoms_1_controller.dart';
+import 'package:solution/controllers/storage_image_symptoms_controller/symptoms_1_controller.dart';
 import 'package:solution/screen/dashboard/list_view_options/dengue_symptoms/symptoms_2.dart';
-import 'package:solution/screen/dashboard/widgets/custom_container_text.dart';
+import 'package:solution/widgets/custom_container_text.dart';
 
 class SymptomsPage1 extends StatefulWidget {
   const SymptomsPage1({super.key});

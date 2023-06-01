@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:solution/controllers/storage_image_controller/preventive_measures_controllers/prevencion_1_controller.dart';
-import 'package:solution/screen/dashboard/widgets/custom_image_container.dart';
+import 'package:solution/controllers/storage_image_preventive_controllers/prevencion_1_controller.dart';
+import 'package:solution/widgets/custom_image_container.dart';
 import 'prevencion_2.dart';
 
 class PrevencionPage1 extends StatefulWidget {
