@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solution/screen/dashboard/list_view_options/informative_videos/informative_2.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InformativePage1 extends StatefulWidget {
   const InformativePage1({super.key});
@@ -109,8 +110,15 @@ class _InformativePage1State extends State<InformativePage1> {
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
-                            onPressed: () {
+                            onPressed: () async {
                               // Here we will place the logic to play the video
+                              final url =
+                                  Uri.parse('https://youtu.be/EghJFnFiR4o');
+                              if (!await canLaunchUrl(url)) {
+                                await launchUrl(url);
+                                // ignore: avoid_print
+                                print('Clicked');
+                              }
                             },
                           ),
                         ),
@@ -164,8 +172,16 @@ class _InformativePage1State extends State<InformativePage1> {
                             icon: const Icon(Icons.play_circle_fill),
                             iconSize: 50.0,
                             color: Colors.white,
-                            onPressed: () {
+                            onPressed: () async {
                               // Here we will place the logic to play the video
+                              final url = Uri.parse(
+                                  'https://www.facebook.com/watch/?v=1192311228154693');
+
+                              if (!await canLaunchUrl(url)) {
+                                await launchUrl(url);
+                                // ignore: avoid_print
+                                print('Clicked');
+                              }
                             },
                           ),
                         ),
