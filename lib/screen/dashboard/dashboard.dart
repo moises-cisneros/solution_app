@@ -41,8 +41,7 @@ class _DashboardPageState extends State<DashboardPage> {
       backgroundColor: const Color.fromARGB(255, 171, 225, 235),
       appBar: AppBar(
           title: const Text('DASHBOARD'),
-          //backgroundColor: const Color.fromARGB(255, 238, 207, 104),
-          backgroundColor: Colors.amber,
+          backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
           actions: <Widget>[
             IconButton(
               tooltip: "Exit",

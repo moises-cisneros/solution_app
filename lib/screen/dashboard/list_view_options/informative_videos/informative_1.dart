@@ -15,6 +15,7 @@ class _InformativePage1State extends State<InformativePage1> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Informative videos"),
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
       ),
       body: Center(
         child: Column(
@@ -175,7 +176,7 @@ class _InformativePage1State extends State<InformativePage1> {
                             onPressed: () async {
                               // Here we will place the logic to play the video
                               final url = Uri.parse(
-                                  'https://www.facebook.com/watch/?v=1192311228154693');
+                                  'https://drive.google.com/file/d/1hEayv0lWgoBGDVlFWjEUTS64RR0t19-p/view?usp=sharing');
 
                               if (!await canLaunchUrl(url)) {
                                 await launchUrl(url);

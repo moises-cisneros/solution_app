@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solution/screen/dashboard/dashboard.dart';
+import 'package:solution/widgets/custom_container_img.dart';
+import 'package:solution/widgets/custom_elevated_button_link.dart';
 
 class ReferencesPage extends StatefulWidget {
   const ReferencesPage({super.key});
@@ -14,6 +16,7 @@ class _ReferencesPageState extends State<ReferencesPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("References"),
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
         actions: <Widget>[
           IconButton(
               onPressed: () {
@@ -28,156 +31,49 @@ class _ReferencesPageState extends State<ReferencesPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             //Image 1 and Text 1
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 294,
-              height: 81,
+            CustomImgContainer(
+                image: 'images/reference_1.png',
+                text: 'National Guide to Chikungunya Disease Management'),
+            CustomElevatedButtonLink(
+                urlBook:
+                    'https://www.minsalud.gob.bo/38-libros-y-normas/fichas-bibliograficas/1574-area-dengue'),
 
-              //Design of the container
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(30),
-                border:
-                    Border.all(color: Colors.grey.withOpacity(0.5), width: 2),
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: Image.asset(
-                      'images/reference_1.png',
-                      width: 52,
-                      height: 65,
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                        'National Guide to Chikungunya Disease Management'),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 16.0),
+            SizedBox(height: 16.0),
 
             //Image 2 and Text 2
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 294,
-              height: 81,
+            CustomImgContainer(
+                image: 'images/reference_2.png',
+                text:
+                    'Planning of mobilization and social communication for the prevention and control of dengue'),
 
-              //Design of the container
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(30),
-                border:
-                    Border.all(color: Colors.grey.withOpacity(0.5), width: 2),
-              ),
+            CustomElevatedButtonLink(
+                urlBook:
+                    'https://www.paho.org/es/documentos/planificacion-movilizacion-comunicacion-social-para-prevencion-control-dengue-2004'),
 
-              child: Row(
-                children: <Widget>[
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: Image.asset(
-                      'images/reference_2.png',
-                      width: 46,
-                      height: 95,
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                        'Planning of mobilization and social communication for the prevention and control of dengue'),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16.0),
+            SizedBox(height: 16.0),
 
             //Image 3 and Text 3
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 294,
-              height: 65,
+            CustomImgContainer(
+                image: 'images/reference_3.png',
+                text: 'Algorithms for the clinical management of dengue cases'),
 
-              //Design of the container
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(30),
-                border:
-                    Border.all(color: Colors.grey.withOpacity(0.5), width: 2),
-              ),
+            CustomElevatedButtonLink(
+                urlBook:
+                    'https://www.paho.org/es/documentos/algoritmos-para-manejo-clinico-casos-dengue'),
 
-              child: Row(
-                children: <Widget>[
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: Image.asset(
-                      'images/reference_3.png',
-                      width: 39,
-                      height: 49,
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                        'Algorithms for the clinical management of dengue cases'),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 16.0),
+            SizedBox(height: 16.0),
 
             //Image 4 and Text 4
-            Container(
-              padding: const EdgeInsets.all(10.0),
-              width: 294,
-              height: 75,
+            CustomImgContainer(
+                image: 'images/reference_4.png',
+                text:
+                    'Guidelines for diagnosis, treatment, prevention and control'),
+            CustomElevatedButtonLink(
+                urlBook: 'https://iris.paho.org/handle/10665.2/31071'),
 
-              //Design of the container
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(30),
-                border:
-                    Border.all(color: Colors.grey.withOpacity(0.5), width: 2),
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: Image.asset(
-                      'images/reference_4.png',
-                      width: 46,
-                      height: 60,
-                    ),
-                  ),
-
-                  const SizedBox(width: 16.0),
-
-                  //Design of the text
-                  const Expanded(
-                    child: Text(
-                        'Guidelines for diagnosis, treatment, prevention and control'),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 40.0),
+            SizedBox(height: 40.0),
           ],
         ),
       ),

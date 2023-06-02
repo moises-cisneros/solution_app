@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:solution/widgets/custom_icon.dart';
 
 class CustomCard extends StatelessWidget {
-  final IconData icon;
+  final CustomIcon icon;
   final String text;
   final Function() onTap;
 
@@ -17,13 +18,13 @@ class CustomCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(10.0),
       elevation: 4.0,
-      shadowColor: Colors.yellow,
+      shadowColor: Colors.black,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.0),
       ),
-      color: const Color.fromARGB(255, 238, 207, 104),
+      color: Colors.white,
       child: ListTile(
-        leading: Icon(icon),
+        leading: icon,
         title: Text(text),
         onTap: onTap,
       ),
