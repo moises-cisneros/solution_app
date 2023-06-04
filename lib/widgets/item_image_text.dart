@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SymptomItem extends StatelessWidget {
+class ItemImageText extends StatelessWidget {
   final String imageUrl;
   final String text;
 
-  const SymptomItem({
+  const ItemImageText({
     Key? key,
     required this.imageUrl,
     required this.text,

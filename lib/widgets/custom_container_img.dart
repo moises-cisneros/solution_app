@@ -22,10 +22,10 @@ class CustomImgContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        // Obtener el ancho disponible en la pantalla
+        // Get the width available on the screen
         final double availableWidth = constraints.maxWidth;
 
-        // Definir el ancho y alto del contenedor según el ancho disponible
+        // Set the width and height of the container according to the available width
         final double containerWidth = availableWidth * 0.8;
         final double containerHeight = containerWidth * 0.38;
 
@@ -34,7 +34,7 @@ class CustomImgContainer extends StatelessWidget {
           width: containerWidth,
           height: containerHeight,
 
-          // Diseño del contenedor
+          // Container layout
           decoration: BoxDecoration(
             color: Colors.grey.withOpacity(0.5),
             borderRadius: BorderRadius.circular(30),
@@ -56,7 +56,7 @@ class CustomImgContainer extends StatelessWidget {
                       ),
                     ),
 
-                    // Si entro alguna Url y es diferente de vacio
+                    // If I enter some Url and it is different from empty
                     if (showIconButton && url.isNotEmpty) ...[
                       Center(
                         // The video player icon above the image

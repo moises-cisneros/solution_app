@@ -12,6 +12,7 @@ class SymptomsScreen2Controller {
   late String urlImage8;
 
   Future<void> initialize() async {
+    // Get the url of the images
     urlImage1 = await _storageService.getImageUrl('images/sintomas_1.png');
     urlImage2 = await _storageService.getImageUrl('images/sintomas_2.png');
     urlImage3 = await _storageService.getImageUrl('images/sintomas_3.png');

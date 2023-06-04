@@ -35,6 +35,10 @@ class _ReferencesPageState extends State<ReferencesPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
+                // In this case, the CustomImgContainer widget is being used, only below it there is another custom
+                // ElevatedButton widget that receives a url string parameter so that clicking on it shows a page with
+                // information related to the app.
+
                 //Image 1 and Text 1
                 CustomImgContainer(
                     image: 'images/reference_1.png',

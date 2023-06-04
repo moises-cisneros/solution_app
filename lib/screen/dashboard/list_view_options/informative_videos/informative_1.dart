@@ -21,6 +21,14 @@ class _InformativePage1State extends State<InformativePage1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
+            /*
+              Widget CustomImgContainer:
+              Next, the custom widget is a Container that receives 5 parameter values: 3 Strings parameters: Of which 
+              one is for the address of the image, another for the text that will appear on the screen and the other 
+              text is for a URL which will be integrated into IconButton (in a future implementation), as it is 
+              responsive and adapts to the size of the screen, 2 values are sent as a parameter: a width and a height.
+            */
+
             //Image 1 and Text 1
             CustomImgContainer(
               image: 'images/informative_1.png',

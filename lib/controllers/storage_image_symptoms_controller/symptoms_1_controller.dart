@@ -5,6 +5,7 @@ class SymptomsScreen1Controller {
   late String urlImage;
 
   Future<void> initialize() async {
+    // Get the url of the image
     urlImage = await _storageService.getImageUrl('images/prevencion_1.png');
   }
 }

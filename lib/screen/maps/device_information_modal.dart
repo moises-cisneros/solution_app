@@ -12,6 +12,7 @@ class DeviceInformationModal extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Row(
+        // Design of the Modal widget with data regarding the theme of the app
         children: <Widget>[
           Expanded(
             child: Container(

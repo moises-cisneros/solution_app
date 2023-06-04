@@ -37,14 +37,20 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
         ],
       ),
       body: Center(
+        // Using FutureBuilder to manage snapshot state.
         child: FutureBuilder<void>(
             future: _initializeData,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(child: CircularProgressIndicator());
+                return const Center(
+                    child:
+                        CircularProgressIndicator()); // Display a loading indicator while waiting to get the data.
               } else if (snapshot.hasError) {
-                return const Center(child: Text("Error occurred"));
+                return const Center(
+                    child: Text(
+                        "Error occurred")); // Display an error message in case there was an error getting the data.
               } else {
+                // Show the obtained data
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

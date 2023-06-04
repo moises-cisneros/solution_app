@@ -12,9 +12,11 @@ class PrevencionPage2 extends StatefulWidget {
 }
 
 class _PrevencionPage2State extends State<PrevencionPage2> {
+  // Create an instance of the controller and declare a variable of type Future.nitializeData variable.
   final PrevencionScreen2Controller _controller = PrevencionScreen2Controller();
   late Future<void> _initializeData;
 
+  // Initialize the data by calling the controller's initialize() method and assign the result to the _initializeData variable.
   @override
   void initState() {
     super.initState();
@@ -29,17 +31,26 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
         backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
       ),
       body: Center(
+        // Using FutureBuilder to manage snapshot state.
         child: FutureBuilder<void>(
           future: _initializeData,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
+              return const Center(
+                  child:
+                      CircularProgressIndicator()); // Display a loading indicator while waiting to get the data.
             } else if (snapshot.hasError) {
-              return const Center(child: Text("Error occurred"));
+              return const Center(
+                  child: Text(
+                      "Error occurred")); // Display an error message in case there was an error getting the data.
             } else {
+              // Show the obtained data
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // Next, a custom Container is used that receives 2 parameters: the URL of an image and the text,
+                  // returning in the Container with a ClipRRect of the image and the corresponding text.
+
                   // Image 3 and Text 3
                   CustomImageContainer(
                     imageUrl: _controller.urlImage1,
