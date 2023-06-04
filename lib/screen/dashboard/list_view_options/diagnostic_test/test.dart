@@ -72,7 +72,9 @@ class _TestPage1State extends State<TestPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Diagnostic test')),
+      appBar: AppBar(
+          title: const Text('Diagnostic test'),
+          backgroundColor: const Color.fromRGBO(33, 172, 131, 10)),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: SingleChildScrollView(
@@ -235,6 +237,10 @@ class _TestPage1State extends State<TestPage1> {
                             child: Text('Risk factors:'),
                           ),
                           ElevatedButton(
+                            style: const ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(
+                                  Color.fromRGBO(33, 172, 131, 10)),
+                            ),
                             //Registro extra #1
                             onPressed: _navigateToOptions1,
                             child: const Text('Seleccionar'),
@@ -251,6 +257,10 @@ class _TestPage1State extends State<TestPage1> {
                             child: Text('Warning signs:'),
                           ),
                           ElevatedButton(
+                            style: const ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(
+                                  Color.fromRGBO(33, 172, 131, 10)),
+                            ),
                             //Registro extra #2
                             onPressed: _navigateToOptions2,
                             child: const Text('Seleccionar'),
@@ -267,6 +277,10 @@ class _TestPage1State extends State<TestPage1> {
                             child: Text('signs of severity:'),
                           ),
                           ElevatedButton(
+                            style: const ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(
+                                  Color.fromRGBO(33, 172, 131, 10)),
+                            ),
                             //Registro extra #3
                             onPressed: _navigateToOptions3,
                             child: const Text('Seleccionar'),
@@ -328,7 +342,20 @@ class _TestPage1State extends State<TestPage1> {
               const SizedBox(
                 height: 40,
               ),
-              controller.buttonAcept(),
+
+              //Controlador para guardar el formulario
+              //controller.buttonAcept(),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                      Color.fromRGBO(33, 172, 131, 10)),
+                ),
+                child: const Text('Accept'),
+              ),
               const SizedBox(
                 height: 40,
               ),

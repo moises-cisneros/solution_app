@@ -28,53 +28,72 @@ class _ReferencesPageState extends State<ReferencesPage> {
               icon: const Icon(Icons.exit_to_app)),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            //Image 1 and Text 1
-            CustomImgContainer(
-                image: 'images/reference_1.png',
-                text: 'National Guide to Chikungunya Disease Management'),
-            CustomElevatedButtonLink(
-                urlBook:
-                    'https://www.minsalud.gob.bo/38-libros-y-normas/fichas-bibliograficas/1574-area-dengue'),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                //Image 1 and Text 1
+                CustomImgContainer(
+                    image: 'images/reference_1.png',
+                    text: 'National Guide to Chikungunya Disease Management',
+                    heigthImg: 0.8,
+                    widthImg: 0.8,
+                    url: ''),
+                CustomElevatedButtonLink(
+                    urlBook:
+                        'https://www.minsalud.gob.bo/38-libros-y-normas/fichas-bibliograficas/1574-area-dengue'),
 
-            SizedBox(height: 16.0),
+                SizedBox(height: 16.0),
 
-            //Image 2 and Text 2
-            CustomImgContainer(
-                image: 'images/reference_2.png',
-                text:
-                    'Planning of mobilization and social communication for the prevention and control of dengue'),
+                //Image 2 and Text 2
+                CustomImgContainer(
+                    image: 'images/reference_2.png',
+                    text:
+                        'Planning of mobilization and social communication for the prevention and control of dengue',
+                    heigthImg: 0.8,
+                    widthImg: 0.8,
+                    url: ''),
 
-            CustomElevatedButtonLink(
-                urlBook:
-                    'https://www.paho.org/es/documentos/planificacion-movilizacion-comunicacion-social-para-prevencion-control-dengue-2004'),
+                CustomElevatedButtonLink(
+                    urlBook:
+                        'https://www.paho.org/es/documentos/planificacion-movilizacion-comunicacion-social-para-prevencion-control-dengue-2004'),
 
-            SizedBox(height: 16.0),
+                SizedBox(height: 16.0),
 
-            //Image 3 and Text 3
-            CustomImgContainer(
-                image: 'images/reference_3.png',
-                text: 'Algorithms for the clinical management of dengue cases'),
+                //Image 3 and Text 3
+                CustomImgContainer(
+                    image: 'images/reference_3.png',
+                    text:
+                        'Algorithms for the clinical management of dengue cases',
+                    heigthImg: 0.8,
+                    widthImg: 0.8,
+                    url: ''),
 
-            CustomElevatedButtonLink(
-                urlBook:
-                    'https://www.paho.org/es/documentos/algoritmos-para-manejo-clinico-casos-dengue'),
+                CustomElevatedButtonLink(
+                    urlBook:
+                        'https://www.paho.org/es/documentos/algoritmos-para-manejo-clinico-casos-dengue'),
 
-            SizedBox(height: 16.0),
+                SizedBox(height: 16.0),
 
-            //Image 4 and Text 4
-            CustomImgContainer(
-                image: 'images/reference_4.png',
-                text:
-                    'Guidelines for diagnosis, treatment, prevention and control'),
-            CustomElevatedButtonLink(
-                urlBook: 'https://iris.paho.org/handle/10665.2/31071'),
+                //Image 4 and Text 4
+                CustomImgContainer(
+                  image: 'images/reference_4.png',
+                  text:
+                      'Guidelines for diagnosis, treatment, prevention and control',
+                  heigthImg: 0.8,
+                  widthImg: 0.8,
+                  url: '',
+                ),
+                CustomElevatedButtonLink(
+                    urlBook: 'https://iris.paho.org/handle/10665.2/31071'),
 
-            SizedBox(height: 40.0),
-          ],
+                SizedBox(height: 40.0),
+              ],
+            ),
+          ),
         ),
       ),
     );

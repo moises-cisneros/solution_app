@@ -76,7 +76,8 @@ class DeviceInformationModal extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () => Navigator.pop(context),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor:
+                              const Color.fromRGBO(33, 172, 131, 10),
                           textStyle: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

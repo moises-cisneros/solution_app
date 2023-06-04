@@ -5,7 +5,7 @@ import 'package:solution/screen/dashboard/list_view_options/edit%20profile/edit_
 import 'package:solution/screen/dashboard/list_view_options/informative_videos/informative_1.dart';
 import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
 import 'package:solution/screen/dashboard/list_view_options/references/references.dart';
-import 'package:solution/screen/dashboard/settings/settings.dart';
+import 'package:solution/screen/dashboard/list_view_options/settings/settings.dart';
 import 'package:solution/widgets/custom_icon.dart';
 import 'custom_card.dart';
 
@@ -22,12 +22,12 @@ class DrawerOptions extends StatelessWidget {
             accountName: Text(
               'User name',
               style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             accountEmail: Text(
               'correo@example.com',
               style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             currentAccountPicture: CircleAvatar(
               backgroundImage: AssetImage('images/profile.jpg'),

@@ -60,6 +60,7 @@ class _RegisterControllerState extends State<RegisterController2> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Risk factors'),
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -74,6 +75,7 @@ class _RegisterControllerState extends State<RegisterController2> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
         onPressed: _acceptSelection,
         child: const Icon(Icons.check),
       ),

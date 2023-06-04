@@ -57,17 +57,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () {
-                // Aquí puedes procesar los cambios y guardar los datos
-                String name = _nameController.text;
-                String email = _emailController.text;
-                String phone = _phoneController.text;
-
-                // Puedes realizar acciones como guardar los datos en una base de datos, enviar una solicitud a un servicio web, etc.
-                // Por ahora, solo mostraremos los datos en la consola
-                print('Name: $name');
-                print('Email: $email');
-                print('Phone: $phone');
-
+                // Future: Aquí procesaremos los cambios y guardar los datos
                 Navigator.pop(context);
               },
               style: const ButtonStyle(

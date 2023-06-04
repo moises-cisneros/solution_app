@@ -23,7 +23,10 @@ class _SymptomsPage1State extends State<SymptomsPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Symptoms')),
+      appBar: AppBar(
+          title: const Text('Symptoms'),
+          backgroundColor: const Color.fromRGBO(33, 172, 131, 10)),
+
       body: Center(
         child: FutureBuilder<void>(
             future: _initializeData,
@@ -61,6 +64,7 @@ class _SymptomsPage1State extends State<SymptomsPage1> {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const SymptomsPage2()));
           },
+          backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
           icon: const Icon(Icons.chevron_right),
           label: const Text("Next")),
     );

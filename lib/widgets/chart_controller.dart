@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class DengueData {
@@ -7,14 +8,13 @@ class DengueData {
   DengueData(this.year, this.cases);
 }
 
-class DengueChart {
+class DengueChart extends StatelessWidget {
   final List<DengueData> dengueData;
 
-  //Create a list of data:
-  DengueChart(this.dengueData);
+  const DengueChart({required this.dengueData, Key? key}) : super(key: key);
 
-  //Create a data series using the above list:
-  charts.LineChart createChart() {
+  @override
+  Widget build(BuildContext context) {
     final seriesList = [
       charts.Series<DengueData, int>(
         id: 'Dengue',
@@ -25,11 +25,9 @@ class DengueChart {
       ),
     ];
 
-    //Create the chart using the data series:
-    return charts.LineChart(
+    final chart = charts.LineChart(
       seriesList,
       animate: true,
-
       //chart: animation
       domainAxis: charts.NumericAxisSpec(
           tickProviderSpec:
@@ -72,6 +70,20 @@ class DengueChart {
           rightMarginSpec: charts.MarginSpec.fixedPixel(20),
           bottomMarginSpec: charts.MarginSpec.fixedPixel(30)),
       animationDuration: const Duration(milliseconds: 500),
+    );
+
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        final chartWidget = SizedBox.expand(child: chart);
+        final availableHeight = constraints.maxHeight;
+        final availableWidth = constraints.maxWidth;
+
+        return SizedBox(
+          height: availableHeight,
+          width: availableWidth,
+          child: chartWidget,
+        );
+      },
     );
   }
 }

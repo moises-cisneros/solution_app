@@ -26,6 +26,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Preventive measures"),
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
       ),
       body: Center(
         child: FutureBuilder<void>(
@@ -79,6 +80,7 @@ class _PrevencionPage2State extends State<PrevencionPage2> {
             ),
           );
         },
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
         icon: const Icon(Icons.chevron_right),
         label: const Text("Next"),
       ),

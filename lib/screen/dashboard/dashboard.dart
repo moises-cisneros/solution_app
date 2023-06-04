@@ -4,7 +4,6 @@ import 'package:solution/widgets/drawer_options.dart';
 import 'package:solution/widgets/elevated_button_controller.dart';
 import 'package:solution/widgets/table_cases_dengue.dart';
 import 'package:flutter/services.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -14,31 +13,24 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  List<DengueData> dengueData = [];
-  charts.LineChart chart = charts.LineChart(const []);
-  @override
-  void initState() {
-    super.initState();
+  //A list of fictitious data is created to represent the evolution of dengue cases:
+  List<DengueData> dengueData = [
+    DengueData(2015, 28510),
+    DengueData(2016, 17311),
+    DengueData(2017, 6289),
+    DengueData(2018, 4885),
+    DengueData(2019, 3112),
+    DengueData(2020, 59418),
+    DengueData(2021, 1810),
+    DengueData(2022, 4414),
+    DengueData(2023, 36416),
+  ];
 
-    //A list of fictitious data is created to represent the evolution of dengue cases:
-    dengueData = [
-      DengueData(2015, 28510),
-      DengueData(2016, 17311),
-      DengueData(2017, 6289),
-      DengueData(2018, 4885),
-      DengueData(2019, 3112),
-      DengueData(2020, 59418),
-      DengueData(2021, 1810),
-      DengueData(2022, 4414),
-      DengueData(2023, 36416),
-    ];
-    chart = DengueChart(dengueData).createChart();
-  }
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 171, 225, 235),
       appBar: AppBar(
           title: const Text('DASHBOARD'),
           backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
@@ -58,7 +50,7 @@ class _DashboardPageState extends State<DashboardPage> {
             child: Column(
               children: [
                 Card(
-                  color: Colors.amber,
+                  color: const Color.fromRGBO(33, 172, 131, 10),
                   child: Container(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -106,8 +98,17 @@ class _DashboardPageState extends State<DashboardPage> {
                         const SizedBox(
                           height: 20,
                         ),
+                      ],
+                    ),
+                  ),
+                ),
 
-                        //Device Map
+                Card(
+                  color: const Color.fromRGBO(33, 172, 131, 10),
+                  child: Container(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
                         Card(
                           elevation: 4.0,
                           shape: RoundedRectangleBorder(
@@ -138,7 +139,14 @@ class _DashboardPageState extends State<DashboardPage> {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(width: 350, height: 350, child: chart),
+
+                SizedBox(
+                    width: 350,
+                    height: 350,
+                    child: DengueChart(
+                      dengueData: dengueData,
+                    )),
+
                 const SizedBox(
                   height: 20,
                 ),
@@ -182,6 +190,29 @@ class _DashboardPageState extends State<DashboardPage> {
 
       //Drop down list
       drawer: const DrawerOptions(),
+
+      //Futura implementacion de un botton para navegarse por las pantallas de la app:
+      /*
+      bottomNavigationBar: BottomNavigationBar(
+          onTap: (int index) {
+            setState(() {
+              currentIndex = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+                icon: CustomIcon(icon: Icons.home, color: Colors.blueGrey),
+                label: "Home"),
+            BottomNavigationBarItem(
+              icon: CustomIcon(icon: Icons.settings, color: Colors.grey),
+              label: 'Settings',
+            ),
+            BottomNavigationBarItem(
+              icon: CustomIcon(
+                  icon: Icons.menu, color: Color.fromRGBO(33, 172, 131, 10)),
+              label: 'Menu',
+            )
+          ]),*/
     );
   }
 }

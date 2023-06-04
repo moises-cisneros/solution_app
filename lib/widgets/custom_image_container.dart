@@ -42,7 +42,8 @@ class CustomImageContainer extends StatelessWidget {
           ),
           const SizedBox(width: 16.0),
           Expanded(
-            child: Text(text),
+            child:
+                Text(text, style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
       ),

@@ -58,6 +58,7 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: const Text('DEVICE LOCATION'), //title
+          backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
         ),
         body: Stack(
           children: [
@@ -116,17 +117,16 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
 
         // Boton flotante para mostar informacion sobre el dispositivo
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return const DeviceInformationModal();
-                });
-          },
-          label: const Text('DETAILS'),
-          icon: const Icon(Icons.info_sharp),
-          backgroundColor: Colors.blue,
-        ),
+            onPressed: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const DeviceInformationModal();
+                  });
+            },
+            label: const Text('DETAILS'),
+            icon: const Icon(Icons.info_sharp),
+            backgroundColor: const Color.fromRGBO(33, 172, 131, 10)),
 
         //Aciones of the floating button
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

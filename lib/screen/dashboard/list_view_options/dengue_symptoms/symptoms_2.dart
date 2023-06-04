@@ -25,6 +25,7 @@ class _SymptomsPage2State extends State<SymptomsPage2> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dengue symptoms'),
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
         actions: <Widget>[
           IconButton(
             onPressed: () {

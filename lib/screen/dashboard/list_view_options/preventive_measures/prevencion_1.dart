@@ -40,17 +40,27 @@ class _PrevencionPage1State extends State<PrevencionPage1> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // Title text
-                  const Center(
-                    child: SizedBox(
-                      width: 287,
-                      height: 96,
-                      child: Text(
-                        "The WHO states that the only way to control or prevent the transmission of dengue is to fight against the transmitting mosquitoes.",
-                        textAlign: TextAlign.center,
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Card(
+                      elevation: 4.0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0)),
+                      child: Container(
+                        padding: const EdgeInsets.all(16.0),
+                        child: const Text(
+                          'The WHO states that the only way to control or prevent the transmission of dengue is to fight against the transmitting mosquitoes.',
+                          maxLines: 5,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
                       ),
                     ),
                   ),
-
+                  const SizedBox(
+                    height: 20,
+                  ),
                   // Image 1 and Text 1
                   CustomImageContainer(
                     imageUrl: _controller.urlImage,

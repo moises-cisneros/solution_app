@@ -10,6 +10,10 @@ class ButtonDevice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: const ButtonStyle(
+        backgroundColor:
+            MaterialStatePropertyAll<Color>(Color.fromRGBO(33, 172, 131, 10)),
+      ),
       onPressed: () async {
         //Request permission to access the location
         var status = await Permission.locationWhenInUse.request();
@@ -36,7 +40,7 @@ class ButtonDevice extends StatelessWidget {
               });
         }
       },
-      child: const Text("Ver dispositivo"),
+      child: const Text("View device"),
     );
   }
 }

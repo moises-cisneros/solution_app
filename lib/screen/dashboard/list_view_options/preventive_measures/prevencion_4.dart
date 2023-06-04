@@ -24,6 +24,7 @@ class _PrevencionPage4State extends State<PrevencionPage4> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Preventive measures"),
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
         actions: <Widget>[
           IconButton(
               onPressed: () {
