@@ -19,7 +19,17 @@ If you don't have Flutter and Dart installed on your computer, you can download 
 
 Also, if you don't have a code editor installed, you can download Visual Studio Code from https://code.visualstudio.com/download or Android Studio from https://developer.android.com/studio.
 
-## Instrucciones de instalación
+## Environment Setup
+Before working on this project, it's necessary to set up your environment to work with Flutter and Dart. Follow these steps to set up your environment:
+
+>- Download and install Flutter from the official Flutter website at https://flutter.dev/docs/get-started/install
+>- Add the Flutter bin directory to your system's PATH. For example, if you installed Flutter in C:\src\flutter, add C:\src\flutter\bin to your PATH.
+>- Download and install the Dart SDK from the official Dart website at https://dart.dev/get-dart
+>- Add the Dart bin directory to your system's PATH. For example, if you installed Dart in C:\dart-sdk, add C:\dart-sdk\bin to your PATH.
+
+Once you have set up your environment, you can follow the installation instructions in the corresponding section.
+
+## Installation Instructions
 Follow these steps to install and set up this project on your computer:
 
 >- Clone this repository on your computer using Git or by downloading the ZIP file from GitHub.
@@ -33,16 +43,6 @@ If you encounter any problems while following these steps, please consult the of
 **Note 1:** If you don't have a mobile device available, you can use an Android or iOS emulator to run the application on your computer. In that case, make sure the emulator is running before running the **flutter run** command. You can use Android Studio or Xcode to set up and run an emulator on your computer.
 
 **Note 2:** If you have tested the application on your own mobile device and it works correctly, this is a good sign that the application is functioning properly. However, please note that results may vary if you use an emulator to run the application. If you decide to test the application on an emulator, you may encounter issues with the location or display of the map, as these aspects may be affected by the emulator's configuration. Therefore, we recommend testing the application on a mobile device whenever possible for the best results.
-
-## Environment Setup
-Before working on this project, it's necessary to set up your environment to work with Flutter and Dart. Follow these steps to set up your environment:
-
->- Download and install Flutter from the official Flutter website at https://flutter.dev/docs/get-started/install
->- Add the Flutter bin directory to your system's PATH. For example, if you installed Flutter in C:\src\flutter, add C:\src\flutter\bin to your PATH.
->- Download and install the Dart SDK from the official Dart website at https://dart.dev/get-dart
->- Add the Dart bin directory to your system's PATH. For example, if you installed Dart in C:\dart-sdk, add C:\dart-sdk\bin to your PATH.
-
-Once you have set up your environment, you can follow the installation instructions in the corresponding section.
 
 ## Troubleshooting
 Below are some common issues that users might encounter when using this application and how to solve them:
@@ -61,6 +61,6 @@ If the application displays a blank screen when opened, there might have been a 
 
 ## Resources
 
-The Buzzbuster app can be found at the following link:
+The Buzzbuster app can be found at the following link, where you will also find an installation guide:
 
-Link: https://drive.google.com/drive/folders/1DvbLitop9J9yH2u3U7UPPLE4cS3kQMUd
+https://drive.google.com/file/d/1ub0U98Rd1sO68UT2INHe9Uoc9Pwuqvh7/view?usp=drive_link
