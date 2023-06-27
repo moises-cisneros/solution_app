@@ -49,103 +49,106 @@ class _DashboardPageState extends State<DashboardPage> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Card(
-                  color: const Color.fromRGBO(33, 172, 131, 10),
-                  child: Container(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        //Device Map
-                        Card(
-                          elevation: 4.0,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0)),
-                          child: Container(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              children: [
-                                const Text(
-                                  'MAP: VIEW OF ALL MOSQUITO TRAP DEVICES',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Center(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                      Icon(
-                                        Icons.map,
-                                        color: Colors.blue,
-                                        size: 40.0,
-                                      ),
+                Container(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      //Device Map
+                      Card(
+                        elevation: 4.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0)),
+                        child: Container(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text(
+                                'VIEW DEVICE',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
 
-                                      SizedBox(
-                                        width: 16.0,
-                                      ),
+                              SizedBox(
+                                width: 26.0,
+                              ),
 
-                                      //Button to display the device
-                                      ButtonDevice(),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
+                              //Button to display the device
+                              ButtonDevice(),
+                            ],
                           ),
                         ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
 
-                Card(
-                  color: const Color.fromRGBO(33, 172, 131, 10),
-                  child: Container(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        Card(
-                          elevation: 4.0,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0)),
-                          child: Container(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              children: const [
-                                Text(
-                                  'DASHBOARD',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
+                Container(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      Card(
+                        elevation: 4.0,
+                        shadowColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0)),
+                        child: Container(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text(
+                                'DASHBOARD',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                width: 26.0,
+                              ),
+                              Icon(
+                                Icons.dashboard_customize_sharp,
+                                color: Colors.blueAccent,
+                              )
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
 
-                const SizedBox(
-                  height: 20,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Center(
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.circular(10)),
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(5),
+                          child: const Text("data"),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 5.0,
+                    ),
+                    Expanded(
+                      child: Center(
+                        child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(10)),
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(5),
+                          child: const Text("data"),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-
-                const Text(
-                  'EVOLUTION OF THE NUMBER OF DENGUE CASES OVER THE YEARS',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-
-                SizedBox(
-                    width: 350,
-                    height: 350,
-                    child: DengueChart(
-                      dengueData: dengueData,
-                    )),
 
                 const SizedBox(
                   height: 20,
@@ -179,6 +182,22 @@ class _DashboardPageState extends State<DashboardPage> {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  'EVOLUTION OF THE NUMBER OF DENGUE CASES OVER THE YEARS',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+
+                SizedBox(
+                    width: 350,
+                    height: 350,
+                    child: DengueChart(
+                      dengueData: dengueData,
+                    )),
+
                 const SizedBox(
                   height: 20,
                 ),

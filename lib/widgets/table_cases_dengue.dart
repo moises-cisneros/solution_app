@@ -24,43 +24,47 @@ class TableDengueCases extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DataTable(
-      columns: const [
-        DataColumn(label: Text('Departament')),
-        DataColumn(label: Text('Cases')),
-      ],
-      rows: casosDengue
-          .map(
-            (casos) => DataRow(
-              cells: [
-                DataCell(Text(casos.departamento)),
-                DataCell(Text(casos.casos.toString())),
-              ],
-            ),
-          )
-          .toList(),
+    return Flex(direction: Axis.horizontal, children: [
+      Expanded(
+        child: DataTable(
+          columns: const [
+            DataColumn(label: Text('Departament')),
+            DataColumn(label: Text('Cases')),
+          ],
+          rows: casosDengue
+              .map(
+                (casos) => DataRow(
+                  cells: [
+                    DataCell(Text(casos.departamento)),
+                    DataCell(Text(casos.casos.toString())),
+                  ],
+                ),
+              )
+              .toList(),
 
-      //Design of the table
-      dataRowColor: MaterialStateColor.resolveWith(
-          (states) => Colors.blue[50] ?? Colors.transparent),
-      dataRowHeight: 60,
-      columnSpacing: 20,
-      headingRowColor: MaterialStateColor.resolveWith(
-          (states) => Colors.grey[300] ?? Colors.transparent),
-      dividerThickness: 1,
-      showBottomBorder: true,
+          //Design of the table
+          dataRowColor: MaterialStateColor.resolveWith(
+              (states) => Colors.blue[50] ?? Colors.transparent),
+          dataRowHeight: 40,
+          columnSpacing: 40,
+          headingRowColor: MaterialStateColor.resolveWith(
+              (states) => Colors.grey[300] ?? Colors.transparent),
+          dividerThickness: 1,
+          showBottomBorder: true,
 
-      dataTextStyle: const TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.normal,
-        color: Colors.black,
+          dataTextStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.normal,
+            color: Colors.black,
+          ),
+
+          headingTextStyle: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
       ),
-
-      headingTextStyle: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-      ),
-    );
+    ]);
   }
 }

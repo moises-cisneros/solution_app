@@ -40,7 +40,7 @@ class ButtonDevice extends StatelessWidget {
               });
         }
       },
-      child: const Text("View device"),
+      child: const Text("Start"),
     );
   }
 }

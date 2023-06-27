@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:solution/screen/maps/device_information_modal.dart';
+import 'package:solution/screen/maps/device_information.dart';
 import 'package:solution/screen/maps/maps_controller.dart';
 
 class GoogleMapsPage extends StatefulWidget {
@@ -55,81 +55,95 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
   }
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('DEVICE LOCATION'), //title
-          backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
-        ),
-        body: Stack(
-          children: [
-            Expanded(
-              // Google Maps API
-              child: GoogleMap(
-                markers: _controller.marker,
-                initialCameraPosition: _controller.initialCameraPosition,
-              ),
-            ),
+  Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final mapHeight = screenHeight * 2.5 / 4;
+    final infoHeigt = screenHeight;
 
-            //Design of the floating text message
-            AnimatedPositioned(
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeOut,
-                // Controls the horizontal position of the floating message
-                top: 16.0,
-                right: 16.0,
-
-                //Container design for the text
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8.0),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 1,
-                          blurRadius: 4,
-                          offset: const Offset(0, 2),
-                        )
-                      ]),
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.0, vertical: 8.0),
-                  child: Column(
-                    children: const [
-                      //Design of the text
-                      Text(
-                        "DISTRICT 4",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blueAccent),
-                      ),
-                      Text(
-                        "Mosquito counter: 25426",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('DEVICE LOCATION'), //title
+        backgroundColor: const Color.fromRGBO(33, 172, 131, 10),
+      ),
+      body: Stack(
+        children: [
+          Column(
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
                   ),
-                ))
-          ],
-        ),
+                ),
+                height: mapHeight,
+                // Google Maps API
+                child: GoogleMap(
+                  markers: _controller.marker,
+                  initialCameraPosition: _controller.initialCameraPosition,
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  height: infoHeigt,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: const DeviceInformationModal(),
+                ),
+              ),
+            ],
+          ),
 
-        // Boton flotante para mostar informacion sobre el dispositivo
-        floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {
-              showModalBottomSheet(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return const DeviceInformationModal();
-                  });
-            },
-            label: const Text('DETAILS'),
-            icon: const Icon(Icons.info_sharp),
-            backgroundColor: const Color.fromRGBO(33, 172, 131, 10)),
+          //Design of the floating text message
+          AnimatedPositioned(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeOut,
+              // Controls the horizontal position of the floating message
+              top: 16.0,
+              right: 16.0,
 
-        //Aciones of the floating button
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-      );
+              //Container design for the text
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 4,
+                        offset: const Offset(0, 2),
+                      )
+                    ]),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                child: Column(
+                  children: const [
+                    //Design of the text
+                    Text(
+                      "DISTRICT 4",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent),
+                    ),
+                    Text(
+                      "Mosquito counter: 25426",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ))
+        ],
+      ),
+    );
+  }
 }
