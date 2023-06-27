@@ -7,7 +7,7 @@ import 'package:solution/screen/dashboard/list_view_options/preventive_measures/
 import 'package:solution/screen/dashboard/list_view_options/references/references.dart';
 import 'package:solution/screen/dashboard/list_view_options/settings/settings.dart';
 import 'package:solution/widgets/custom_icon.dart';
-import 'custom_card.dart';
+import 'custom_card_icon.dart';
 
 class DrawerOptions extends StatelessWidget {
   const DrawerOptions({super.key});
@@ -43,7 +43,7 @@ class DrawerOptions extends StatelessWidget {
             color: Colors.white,
           ),
 
-          CustomCard(
+          CustomCardIcon(
             icon: const CustomIcon(icon: Icons.edit, color: Colors.blue),
             text: 'Edit profile',
             onTap: () {
@@ -57,7 +57,7 @@ class DrawerOptions extends StatelessWidget {
           ),
 
           //Options of the screens
-          CustomCard(
+          CustomCardIcon(
             icon: const CustomIcon(icon: Icons.warning, color: Colors.yellow),
             text: 'Preventive measures',
             onTap: () {
@@ -70,7 +70,7 @@ class DrawerOptions extends StatelessWidget {
             },
           ),
 
-          CustomCard(
+          CustomCardIcon(
             icon: const CustomIcon(
                 icon: Icons.sick_outlined, color: Colors.lightGreen),
             text: 'Dengue symptoms',
@@ -82,7 +82,7 @@ class DrawerOptions extends StatelessWidget {
             },
           ),
 
-          CustomCard(
+          CustomCardIcon(
               icon: const CustomIcon(
                   icon: Icons.receipt_long_outlined, color: Colors.grey),
               text: 'Diagnostic test',
@@ -91,7 +91,7 @@ class DrawerOptions extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const TestPage1()));
               }),
 
-          CustomCard(
+          CustomCardIcon(
             icon: const CustomIcon(
                 icon: Icons.video_collection, color: Colors.red),
             text: 'Informative videos',
@@ -103,7 +103,7 @@ class DrawerOptions extends StatelessWidget {
             },
           ),
 
-          CustomCard(
+          CustomCardIcon(
             icon: const CustomIcon(
               icon: Icons.open_in_new,
               color: Colors.grey,
@@ -117,7 +117,7 @@ class DrawerOptions extends StatelessWidget {
             },
           ),
 
-          CustomCard(
+          CustomCardIcon(
               icon: const CustomIcon(
                 icon: Icons.settings,
                 color: Colors.grey,

@@ -82,6 +82,10 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
                 child: GoogleMap(
                   markers: _controller.marker,
                   initialCameraPosition: _controller.initialCameraPosition,
+                  /*onTap: (LatLng latLng) {
+                    print(
+                        'Coordenadas tocadas: ${latLng.latitude}, ${latLng.longitude}');
+                  },*/
                 ),
               ),
               Expanded(
@@ -94,7 +98,7 @@ class _GoogleMapsPageState extends State<GoogleMapsPage> {
                       topRight: Radius.circular(20),
                     ),
                   ),
-                  child: const DeviceInformationModal(),
+                  child: const DeviceInformation(),
                 ),
               ),
             ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DeviceInformationModal extends StatelessWidget {
-  const DeviceInformationModal({super.key});
+class DeviceInformation extends StatelessWidget {
+  const DeviceInformation({super.key});
 
   @override
   Widget build(BuildContext context) {

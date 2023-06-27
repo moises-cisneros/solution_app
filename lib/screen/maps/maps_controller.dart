@@ -21,6 +21,8 @@ class MapsController {
     final newMarker = Marker(
       markerId: newMarkerId,
       position: LatLng(lat, lng),
+      infoWindow: const InfoWindow(
+          title: "Device Information #3", snippet: "Mosquito: 6,002"),
     );
 
     // Agregar el nuevo Marker al mapa markersDevice
