@@ -28,7 +28,7 @@ class CustomImageContainer extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
+      child: Column(
         children: <Widget>[
           Expanded(
             child: SizedBox(
@@ -36,15 +36,16 @@ class CustomImageContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15.0),
                 child: imageUrl.isEmpty
                     ? const Center(child: CircularProgressIndicator())
-                    : Image.network(imageUrl),
+                    : Image.network(
+                        imageUrl,
+                        width: 300,
+                        height: 300,
+                      ),
               ),
             ),
           ),
           const SizedBox(width: 16.0),
-          Expanded(
-            child:
-                Text(text, style: const TextStyle(fontWeight: FontWeight.bold)),
-          ),
+          Text(text, style: const TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
     );

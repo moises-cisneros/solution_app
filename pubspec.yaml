@@ -23,6 +23,7 @@ dependencies:
   firebase_core: ^2.13.0
   get: ^4.6.5
   url_launcher: ^6.1.11
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
