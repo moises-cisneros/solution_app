@@ -1,6 +1,6 @@
 import 'package:solution/services/firebase_storage_service.dart';
 
-class PrevencionScreen1Controller {
+class PrevencionController {
   final FirebaseStorageService _storageService = FirebaseStorageService();
   late String urlImage1;
   late String urlImage2;
@@ -14,7 +14,8 @@ class PrevencionScreen1Controller {
 
   Future<void> initialize() async {
     // Get the url of the image
-    urlImage1 = await _storageService.getImageUrl('images/prevencion_1.png');
+    urlImage1 =
+        await _storageService.getImageUrl('images/preventive_red_1.png');
     urlImage2 = await _storageService.getImageUrl('images/prevencion_2.png');
     urlImage3 = await _storageService.getImageUrl('images/prevencion_3.png');
     urlImage4 = await _storageService.getImageUrl('images/prevencion_4.png');

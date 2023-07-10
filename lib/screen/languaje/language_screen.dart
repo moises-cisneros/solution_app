@@ -56,7 +56,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     ListView(
                       padding: const EdgeInsets.all(0),
                       shrinkWrap: true,
-                      //
                       children: controller.languageOptions.map((language) {
                         return Card(
                           margin: const EdgeInsets.all(10.0),
@@ -86,18 +85,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
               const SizedBox(
                 height: 25,
               ),
-              /*FloatingActionButton.extended(
-                backgroundColor: const Color.fromARGB(217, 217, 217, 217),
-                onPressed: () {
-                  //Navigation to the screen panel
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const LoginPage()));
-                },
-                label: const Text(
-                  "Aceptar",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                ),
-              ),*/
             ],
           ),
         ),

@@ -209,29 +209,6 @@ class _DashboardPageState extends State<DashboardPage> {
 
       //Drop down list
       drawer: const DrawerOptions(),
-
-      //Futura implementacion de un botton para navegarse por las pantallas de la app:
-      /*
-      bottomNavigationBar: BottomNavigationBar(
-          onTap: (int index) {
-            setState(() {
-              currentIndex = index;
-            });
-          },
-          items: const [
-            BottomNavigationBarItem(
-                icon: CustomIcon(icon: Icons.home, color: Colors.blueGrey),
-                label: "Home"),
-            BottomNavigationBarItem(
-              icon: CustomIcon(icon: Icons.settings, color: Colors.grey),
-              label: 'Settings',
-            ),
-            BottomNavigationBarItem(
-              icon: CustomIcon(
-                  icon: Icons.menu, color: Color.fromRGBO(33, 172, 131, 10)),
-              label: 'Menu',
-            )
-          ]),*/
     );
   }
 }

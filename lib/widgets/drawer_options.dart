@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:solution/screen/dashboard/list_view_options/dengue_symptoms/symptoms_1.dart';
+import 'package:solution/screen/dashboard/list_view_options/symptoms.dart';
 import 'package:solution/screen/dashboard/list_view_options/diagnostic_test/test.dart';
 import 'package:solution/screen/dashboard/list_view_options/edit%20profile/edit_profile.dart';
-import 'package:solution/screen/dashboard/list_view_options/informative_videos/informative_1.dart';
-import 'package:solution/screen/dashboard/list_view_options/preventive_measures/prevencion_1.dart';
-import 'package:solution/screen/dashboard/list_view_options/references/references.dart';
+import 'package:solution/screen/dashboard/list_view_options/informative.dart';
+import 'package:solution/screen/dashboard/list_view_options/preventive.dart';
+import 'package:solution/screen/dashboard/list_view_options/references.dart';
 import 'package:solution/screen/dashboard/list_view_options/settings/settings.dart';
 import 'package:solution/widgets/custom_icon.dart';
 import 'custom_card_icon.dart';
@@ -15,7 +15,6 @@ class DrawerOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      //backgroundColor: Colors.lightBlue,
       child: ListView(
         children: [
           const UserAccountsDrawerHeader(
@@ -64,7 +63,7 @@ class DrawerOptions extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const PrevencionPage1(),
+                  builder: (context) => const PreventiveScreen(),
                 ),
               );
             },
@@ -78,7 +77,7 @@ class DrawerOptions extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const SymptomsPage1()));
+                      builder: (context) => const SymptomsScreen()));
             },
           ),
 
@@ -113,7 +112,7 @@ class DrawerOptions extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const ReferencesPage()));
+                      builder: (context) => const ReferencesScreen()));
             },
           ),
 
